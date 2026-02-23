@@ -5,17 +5,25 @@ import java.util.List;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.MissingServletRequestParameterException;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.ResponseStatus;
+import org.springframework.web.method.annotation.MethodArgumentTypeMismatchException;
+import org.springframework.http.HttpStatus;
 
 import com.fsb.greeting.web.models.User;
 
 @Controller
 public class GreetingController {
     
-    @RequestMapping("/greeting") //Get  http://localhost:8080/greeting?name="demo"&age="20"
+    //@RequestMapping("/greeting") //Get  http://localhost:8080/greeting?name="demo"&age="20"
+     @RequestMapping({"/","/greeting"}) 
+   // @ResponseBody
     public String greeting(@RequestParam(value="name", required=false, defaultValue = "world") String otherName, 
-                           @RequestParam(defaultValue = "40") int age, // par defaut age est obligatoir
+                           @RequestParam() int age, // par defaut age est obligatoir
                            Model model){
           String name="Demo";
           String [] names=new String[]{"Sabri","Islem","Toto"};
@@ -30,7 +38,7 @@ public class GreetingController {
          model.addAttribute("age", age);
          model.addAttribute("names", names);
          model.addAttribute("users", users);
-
+       // return "<h1>"+ name+"</h1>";
         return "greeting-view";
     }
        
@@ -40,5 +48,6 @@ public class GreetingController {
         //todo
         return "products";
     }
+
 
 }

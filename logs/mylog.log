@@ -1,0 +1,31 @@
+2026-02-18T09:52:28.650+01:00  INFO 20132 --- [greeting] [restartedMain] com.fsb.greeting.GreetingApplication     : Starting GreetingApplication using Java 17.0.10 with PID 20132 (E:\FSB\Mes matières\s2\Spring Boot GLSI2\2025-2026\ws-2026\greeting\target\classes started by adem in E:\FSB\Mes matières\s2\Spring Boot GLSI2\2025-2026\ws-2026\greeting)
+2026-02-18T09:52:28.652+01:00  INFO 20132 --- [greeting] [restartedMain] com.fsb.greeting.GreetingApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-02-18T09:52:28.892+01:00  INFO 20132 --- [greeting] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-02-18T09:52:28.897+01:00  INFO 20132 --- [greeting] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-02-18T09:52:28.899+01:00  INFO 20132 --- [greeting] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.50]
+2026-02-18T09:52:28.952+01:00  INFO 20132 --- [greeting] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-02-18T09:52:28.952+01:00  INFO 20132 --- [greeting] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 297 ms
+2026-02-18T09:52:29.061+01:00  INFO 20132 --- [greeting] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-02-18T09:52:29.083+01:00  INFO 20132 --- [greeting] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-02-18T09:52:29.099+01:00  INFO 20132 --- [greeting] [restartedMain] com.fsb.greeting.GreetingApplication     : Started GreetingApplication in 0.58 seconds (process running for 3399.671)
+2026-02-18T09:52:29.138+01:00  INFO 20132 --- [greeting] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-02-18T09:52:46.282+01:00  INFO 20132 --- [greeting] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-18T09:52:46.284+01:00  INFO 20132 --- [greeting] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-02-18T09:52:46.285+01:00  INFO 20132 --- [greeting] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-02-18T09:52:46.289+01:00  WARN 20132 --- [greeting] [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'age' for method parameter type int is not present]
+2026-02-18T09:52:48.401+01:00 ERROR 20132 --- [greeting] [http-nio-8080-exec-2] c.f.g.w.exceptions.ExceptionController   : No static resource .well-known/appspecific/com.chrome.devtools.json.
+2026-02-18T09:52:48.434+01:00  WARN 20132 --- [greeting] [http-nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource .well-known/appspecific/com.chrome.devtools.json.]
+2026-02-18T09:53:33.799+01:00  INFO 20132 --- [greeting] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-02-18T09:53:33.801+01:00  INFO 20132 --- [greeting] [Thread-83] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-02-18T09:53:33.993+01:00  INFO 20132 --- [greeting] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-02-18T09:53:34.099+01:00  INFO 20132 --- [greeting] [restartedMain] com.fsb.greeting.GreetingApplication     : Starting GreetingApplication using Java 17.0.10 with PID 20132 (E:\FSB\Mes matières\s2\Spring Boot GLSI2\2025-2026\ws-2026\greeting\target\classes started by adem in E:\FSB\Mes matières\s2\Spring Boot GLSI2\2025-2026\ws-2026\greeting)
+2026-02-18T09:53:34.103+01:00  INFO 20132 --- [greeting] [restartedMain] com.fsb.greeting.GreetingApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-02-18T09:53:34.300+01:00  INFO 20132 --- [greeting] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-02-18T09:53:34.302+01:00  INFO 20132 --- [greeting] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-02-18T09:53:34.304+01:00  INFO 20132 --- [greeting] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.50]
+2026-02-18T09:53:34.327+01:00  INFO 20132 --- [greeting] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-02-18T09:53:34.328+01:00  INFO 20132 --- [greeting] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 221 ms
+2026-02-18T09:53:34.406+01:00  INFO 20132 --- [greeting] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-02-18T09:53:34.414+01:00  INFO 20132 --- [greeting] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-02-18T09:53:34.417+01:00  INFO 20132 --- [greeting] [restartedMain] com.fsb.greeting.GreetingApplication     : Started GreetingApplication in 0.352 seconds (process running for 3464.989)
+2026-02-18T09:53:34.418+01:00  INFO 20132 --- [greeting] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged

@@ -1,24 +1,35 @@
 <html>
-    <head>
-        <title>Greeting page</title>
-    </head>
-    <body>
-        <h1 th:text="|Hello, ${myName} from spring mvc APP|">Hello World form spring mvc APP</h1>
-        <h1>Name list</h1> 
-        <ul>
-            <li th:each="name:${names}" th:text="${name}">item1</li>
-         </ul> 
-         <h2 th:text="|I have ${age} years|"> default age</h2>
 
-         <p th:if="(${age}<60)" th:text="'You are young!'">
-                Young
-         </p>
-           <p th:unless="(${age}<60)" th:text="'You are old!'">
-                Young
-           </p>
-           <h1>User list</h1> 
-        <ul>
-            <li th:each="user:${users}" th:text="${user.name}">item1</li>
-         </ul> 
-    </body>
+<head>
+    <title>Greeting page</title>
+</head>
+
+<body>
+    <h1 th:text="|Hello, ${myName} from spring mvc APP|">Hello World form spring mvc APP</h1>
+    <h1>Name list</h1>
+    <ul>
+        <li th:each="name:${names}" th:text="${name}">item1</li>
+    </ul>
+    <h2 th:text="|I have ${age} years|"> default age</h2>
+
+    <p th:if="(${age}<60)" th:text="'You are young!'">
+        Young
+    </p>
+    <p th:unless="(${age}<60)" th:text="'You are old!'">
+        Young
+    </p>
+    <h1>User list</h1>
+    <ul>
+       <!--  <li th:each="user:${users}" th:text="${user.name}">item1 -->
+          <li th:each="user:${users}">item1
+            <th:block th:switch="${user.role}">
+                <span th:case="super-admin" th:text="|${user.name} is a super administrator|"> User is a super administrator</span>
+                <p th:case="admin" th:text="|${user.name} is an administrator|"> User is is an administrator</p>
+                <p th:case="user" th:text="|${user.name} is a simple user|"> User is a simple user</p>
+                <p th:case="*"> User has other role!</p>
+            </th:block> 
+        </li>
+    </ul>
+</body>
+
 </html>
