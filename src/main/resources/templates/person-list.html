@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Person list</title>
+<script type="text/javascript"></script>
+</head>
+<body>
+   <h1>Person list</h1>
+   <div>
+    <a th:href="@{/persons/create}">Add Person</a>
+   </div>
+   <table border="1" width="80%">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Photo</th>
+        <th>Action</th>
+    </tr>
+    <tr th:each="person:${persons}">
+       <td th:text="${person.id}"></td>
+       <td th:text="${person.name}"></td>
+       <td th:text="${person.age}"></td>
+       <td> <img th:src="(${person.photo})?@{|/images/${person.photo}|}:@{/images/default.png}" alt="photo" width="50" height="50"></td>
+       <td> Update Delete</td>
+    </tr>
+   </table>
+</body>
+</html>
