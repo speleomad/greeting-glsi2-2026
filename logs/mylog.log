@@ -1,192 +1,479 @@
-2026-02-25T08:45:33.960+01:00  INFO 20580 --- [greeting] [restartedMain] com.fsb.greeting.GreetingApplication     : Starting GreetingApplication using Java 17.0.10 with PID 20580 (E:\FSB\Mes matières\s2\Spring Boot GLSI2\2025-2026\ws-2026\greeting\target\classes started by adem in E:\FSB\Mes matières\s2\Spring Boot GLSI2\2025-2026\ws-2026\greeting)
-2026-02-25T08:45:34.012+01:00  INFO 20580 --- [greeting] [restartedMain] com.fsb.greeting.GreetingApplication     : No active profile set, falling back to 1 default profile: "default"
-2026-02-25T08:45:34.239+01:00  INFO 20580 --- [greeting] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2026-02-25T08:45:34.242+01:00  INFO 20580 --- [greeting] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2026-02-25T08:45:37.692+01:00  INFO 20580 --- [greeting] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2026-02-25T08:45:37.718+01:00  INFO 20580 --- [greeting] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-02-25T08:45:37.721+01:00  INFO 20580 --- [greeting] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.50]
-2026-02-25T08:45:37.792+01:00  INFO 20580 --- [greeting] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-02-25T08:45:37.793+01:00  INFO 20580 --- [greeting] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3549 ms
-2026-02-25T08:45:38.570+01:00  INFO 20580 --- [greeting] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2026-02-25T08:45:38.641+01:00  INFO 20580 --- [greeting] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2026-02-25T08:45:38.670+01:00  INFO 20580 --- [greeting] [restartedMain] com.fsb.greeting.GreetingApplication     : Started GreetingApplication in 5.899 seconds (process running for 6.53)
-2026-02-25T08:46:47.377+01:00  INFO 20580 --- [greeting] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-02-25T08:46:47.379+01:00  INFO 20580 --- [greeting] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-02-25T08:46:47.385+01:00  INFO 20580 --- [greeting] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
-2026-02-25T08:46:47.487+01:00 ERROR 20580 --- [greeting] [http-nio-8080-exec-1] c.f.g.w.exceptions.ExceptionController   : Required request parameter 'age' for method parameter type int is not present
-2026-02-25T08:46:47.539+01:00  WARN 20580 --- [greeting] [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'age' for method parameter type int is not present]
-2026-02-25T08:46:56.601+01:00 ERROR 20580 --- [greeting] [http-nio-8080-exec-2] c.f.g.w.exceptions.ExceptionController   : No static resource favicon.ico.
-2026-02-25T08:46:56.603+01:00  WARN 20580 --- [greeting] [http-nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
-2026-02-25T08:47:15.067+01:00 ERROR 20580 --- [greeting] [http-nio-8080-exec-4] c.f.g.w.exceptions.ExceptionController   : No static resource favicon.ico.
-2026-02-25T08:47:15.071+01:00  WARN 20580 --- [greeting] [http-nio-8080-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
-2026-02-25T08:48:21.150+01:00 ERROR 20580 --- [greeting] [http-nio-8080-exec-7] c.f.g.w.exceptions.ExceptionController   : No static resource favicon.ico.
-2026-02-25T08:48:21.152+01:00  WARN 20580 --- [greeting] [http-nio-8080-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
-2026-02-25T08:48:59.495+01:00 ERROR 20580 --- [greeting] [http-nio-8080-exec-9] c.f.g.w.exceptions.ExceptionController   : No static resource favicon.ico.
-2026-02-25T08:48:59.496+01:00  WARN 20580 --- [greeting] [http-nio-8080-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
-2026-02-25T08:50:43.506+01:00 ERROR 20580 --- [greeting] [http-nio-8080-exec-2] c.f.g.w.exceptions.ExceptionController   : No static resource favicon.ico.
-2026-02-25T08:50:43.507+01:00  WARN 20580 --- [greeting] [http-nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
-2026-02-25T08:51:15.156+01:00 ERROR 20580 --- [greeting] [http-nio-8080-exec-4] c.f.g.w.exceptions.ExceptionController   : No static resource favicon.ico.
-2026-02-25T08:51:15.162+01:00  WARN 20580 --- [greeting] [http-nio-8080-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
-2026-02-25T08:52:51.503+01:00 ERROR 20580 --- [greeting] [http-nio-8080-exec-7] c.f.g.w.exceptions.ExceptionController   : No static resource favicon.ico.
-2026-02-25T08:52:51.504+01:00  WARN 20580 --- [greeting] [http-nio-8080-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
-2026-02-25T08:53:26.987+01:00 ERROR 20580 --- [greeting] [http-nio-8080-exec-9] c.f.g.w.exceptions.ExceptionController   : No static resource favicon.ico.
-2026-02-25T08:53:26.989+01:00  WARN 20580 --- [greeting] [http-nio-8080-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
-2026-02-25T08:56:45.021+01:00 ERROR 20580 --- [greeting] [http-nio-8080-exec-2] c.f.g.w.exceptions.ExceptionController   : No static resource favicon.ico.
-2026-02-25T08:56:45.023+01:00  WARN 20580 --- [greeting] [http-nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
-2026-02-25T08:57:08.812+01:00 ERROR 20580 --- [greeting] [http-nio-8080-exec-3] c.f.g.w.exceptions.ExceptionController   : No static resource favicon.ico.
-2026-02-25T08:57:08.813+01:00  WARN 20580 --- [greeting] [http-nio-8080-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
-2026-02-25T08:57:36.980+01:00 ERROR 20580 --- [greeting] [http-nio-8080-exec-5] c.f.g.w.exceptions.ExceptionController   : No static resource favicon.ico.
-2026-02-25T08:57:36.981+01:00  WARN 20580 --- [greeting] [http-nio-8080-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
-2026-02-25T08:57:40.707+01:00 ERROR 20580 --- [greeting] [http-nio-8080-exec-7] c.f.g.w.exceptions.ExceptionController   : No static resource favicon.ico.
-2026-02-25T08:57:40.709+01:00  WARN 20580 --- [greeting] [http-nio-8080-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
-2026-02-25T08:59:09.731+01:00  INFO 20580 --- [greeting] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
-2026-02-25T08:59:09.766+01:00  INFO 20580 --- [greeting] [Thread-5] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2026-02-25T08:59:10.680+01:00  INFO 20580 --- [greeting] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2026-02-25T08:59:11.348+01:00  INFO 20580 --- [greeting] [restartedMain] com.fsb.greeting.GreetingApplication     : Starting GreetingApplication using Java 17.0.10 with PID 20580 (E:\FSB\Mes matières\s2\Spring Boot GLSI2\2025-2026\ws-2026\greeting\target\classes started by adem in E:\FSB\Mes matières\s2\Spring Boot GLSI2\2025-2026\ws-2026\greeting)
-2026-02-25T08:59:11.366+01:00  INFO 20580 --- [greeting] [restartedMain] com.fsb.greeting.GreetingApplication     : No active profile set, falling back to 1 default profile: "default"
-2026-02-25T08:59:12.404+01:00  INFO 20580 --- [greeting] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2026-02-25T08:59:12.430+01:00  INFO 20580 --- [greeting] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-02-25T08:59:12.495+01:00  INFO 20580 --- [greeting] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.50]
-2026-02-25T08:59:12.729+01:00  INFO 20580 --- [greeting] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-02-25T08:59:12.778+01:00  INFO 20580 --- [greeting] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1392 ms
-2026-02-25T08:59:13.344+01:00  INFO 20580 --- [greeting] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2026-02-25T08:59:13.358+01:00  INFO 20580 --- [greeting] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2026-02-25T08:59:13.367+01:00  INFO 20580 --- [greeting] [restartedMain] com.fsb.greeting.GreetingApplication     : Started GreetingApplication in 2.555 seconds (process running for 821.225)
-2026-02-25T08:59:13.378+01:00  INFO 20580 --- [greeting] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2026-02-25T09:01:08.432+01:00  INFO 20580 --- [greeting] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
-2026-02-25T09:01:08.444+01:00  INFO 20580 --- [greeting] [Thread-7] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2026-02-25T09:01:09.093+01:00  INFO 20580 --- [greeting] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2026-02-25T09:01:09.190+01:00  INFO 20580 --- [greeting] [restartedMain] com.fsb.greeting.GreetingApplication     : Starting GreetingApplication using Java 17.0.10 with PID 20580 (E:\FSB\Mes matières\s2\Spring Boot GLSI2\2025-2026\ws-2026\greeting\target\classes started by adem in E:\FSB\Mes matières\s2\Spring Boot GLSI2\2025-2026\ws-2026\greeting)
-2026-02-25T09:01:09.191+01:00  INFO 20580 --- [greeting] [restartedMain] com.fsb.greeting.GreetingApplication     : No active profile set, falling back to 1 default profile: "default"
-2026-02-25T09:01:09.546+01:00  INFO 20580 --- [greeting] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2026-02-25T09:01:09.549+01:00  INFO 20580 --- [greeting] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-02-25T09:01:09.550+01:00  INFO 20580 --- [greeting] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.50]
-2026-02-25T09:01:09.587+01:00  INFO 20580 --- [greeting] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-02-25T09:01:09.600+01:00  INFO 20580 --- [greeting] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 405 ms
-2026-02-25T09:01:09.737+01:00  INFO 20580 --- [greeting] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2026-02-25T09:01:09.748+01:00  INFO 20580 --- [greeting] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2026-02-25T09:01:09.756+01:00  INFO 20580 --- [greeting] [restartedMain] com.fsb.greeting.GreetingApplication     : Started GreetingApplication in 0.61 seconds (process running for 937.615)
-2026-02-25T09:01:09.758+01:00  INFO 20580 --- [greeting] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2026-02-25T09:01:20.356+01:00  INFO 20580 --- [greeting] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
-2026-02-25T09:01:20.370+01:00  INFO 20580 --- [greeting] [Thread-11] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2026-02-25T09:01:20.826+01:00  INFO 20580 --- [greeting] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2026-02-25T09:01:21.001+01:00  INFO 20580 --- [greeting] [restartedMain] com.fsb.greeting.GreetingApplication     : Starting GreetingApplication using Java 17.0.10 with PID 20580 (E:\FSB\Mes matières\s2\Spring Boot GLSI2\2025-2026\ws-2026\greeting\target\classes started by adem in E:\FSB\Mes matières\s2\Spring Boot GLSI2\2025-2026\ws-2026\greeting)
-2026-02-25T09:01:21.025+01:00  INFO 20580 --- [greeting] [restartedMain] com.fsb.greeting.GreetingApplication     : No active profile set, falling back to 1 default profile: "default"
-2026-02-25T09:01:21.612+01:00  INFO 20580 --- [greeting] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2026-02-25T09:01:21.618+01:00  INFO 20580 --- [greeting] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-02-25T09:01:21.651+01:00  INFO 20580 --- [greeting] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.50]
-2026-02-25T09:01:21.737+01:00  INFO 20580 --- [greeting] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-02-25T09:01:21.740+01:00  INFO 20580 --- [greeting] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 642 ms
-2026-02-25T09:01:22.000+01:00  INFO 20580 --- [greeting] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2026-02-25T09:01:22.060+01:00  INFO 20580 --- [greeting] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2026-02-25T09:01:22.067+01:00  INFO 20580 --- [greeting] [restartedMain] com.fsb.greeting.GreetingApplication     : Started GreetingApplication in 1.18 seconds (process running for 949.926)
-2026-02-25T09:01:22.079+01:00  INFO 20580 --- [greeting] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2026-02-25T09:04:21.866+01:00  INFO 20580 --- [greeting] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
-2026-02-25T09:04:21.869+01:00  INFO 20580 --- [greeting] [Thread-15] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2026-02-25T09:04:22.387+01:00  INFO 20580 --- [greeting] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2026-02-25T09:04:22.528+01:00  INFO 20580 --- [greeting] [restartedMain] com.fsb.greeting.GreetingApplication     : Starting GreetingApplication using Java 17.0.10 with PID 20580 (E:\FSB\Mes matières\s2\Spring Boot GLSI2\2025-2026\ws-2026\greeting\target\classes started by adem in E:\FSB\Mes matières\s2\Spring Boot GLSI2\2025-2026\ws-2026\greeting)
-2026-02-25T09:04:22.545+01:00  INFO 20580 --- [greeting] [restartedMain] com.fsb.greeting.GreetingApplication     : No active profile set, falling back to 1 default profile: "default"
-2026-02-25T09:04:22.966+01:00  INFO 20580 --- [greeting] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2026-02-25T09:04:22.967+01:00  INFO 20580 --- [greeting] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-02-25T09:04:22.969+01:00  INFO 20580 --- [greeting] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.50]
-2026-02-25T09:04:23.010+01:00  INFO 20580 --- [greeting] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-02-25T09:04:23.011+01:00  INFO 20580 --- [greeting] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 435 ms
-2026-02-25T09:04:23.129+01:00  INFO 20580 --- [greeting] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2026-02-25T09:04:23.141+01:00  INFO 20580 --- [greeting] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2026-02-25T09:04:23.150+01:00  INFO 20580 --- [greeting] [restartedMain] com.fsb.greeting.GreetingApplication     : Started GreetingApplication in 0.704 seconds (process running for 1131.009)
-2026-02-25T09:04:23.159+01:00  INFO 20580 --- [greeting] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2026-02-25T09:20:25.605+01:00  INFO 20580 --- [greeting] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
-2026-02-25T09:20:25.615+01:00  INFO 20580 --- [greeting] [Thread-19] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2026-02-25T09:20:25.948+01:00  INFO 20580 --- [greeting] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2026-02-25T09:20:26.063+01:00  INFO 20580 --- [greeting] [restartedMain] com.fsb.greeting.GreetingApplication     : Starting GreetingApplication using Java 17.0.10 with PID 20580 (E:\FSB\Mes matières\s2\Spring Boot GLSI2\2025-2026\ws-2026\greeting\target\classes started by adem in E:\FSB\Mes matières\s2\Spring Boot GLSI2\2025-2026\ws-2026\greeting)
-2026-02-25T09:20:26.066+01:00  INFO 20580 --- [greeting] [restartedMain] com.fsb.greeting.GreetingApplication     : No active profile set, falling back to 1 default profile: "default"
-2026-02-25T09:20:26.325+01:00  INFO 20580 --- [greeting] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2026-02-25T09:20:26.327+01:00  INFO 20580 --- [greeting] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-02-25T09:20:26.328+01:00  INFO 20580 --- [greeting] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.50]
-2026-02-25T09:20:26.365+01:00  INFO 20580 --- [greeting] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-02-25T09:20:26.366+01:00  INFO 20580 --- [greeting] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 293 ms
-2026-02-25T09:20:26.481+01:00  INFO 20580 --- [greeting] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2026-02-25T09:20:26.500+01:00  INFO 20580 --- [greeting] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2026-02-25T09:20:26.505+01:00  INFO 20580 --- [greeting] [restartedMain] com.fsb.greeting.GreetingApplication     : Started GreetingApplication in 0.479 seconds (process running for 2094.364)
-2026-02-25T09:20:26.511+01:00  INFO 20580 --- [greeting] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2026-02-25T09:20:44.052+01:00  INFO 20580 --- [greeting] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-02-25T09:20:44.054+01:00  INFO 20580 --- [greeting] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-02-25T09:20:44.056+01:00  INFO 20580 --- [greeting] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2026-02-25T09:20:44.071+01:00 ERROR 20580 --- [greeting] [http-nio-8080-exec-1] c.f.g.w.exceptions.ExceptionController   : No static resource favicon.ico.
-2026-02-25T09:20:44.078+01:00  WARN 20580 --- [greeting] [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
-2026-02-25T09:20:49.549+01:00 ERROR 20580 --- [greeting] [http-nio-8080-exec-4] c.f.g.w.exceptions.ExceptionController   : No static resource favicon.ico.
-2026-02-25T09:20:49.550+01:00  WARN 20580 --- [greeting] [http-nio-8080-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
-2026-02-25T09:21:04.998+01:00 ERROR 20580 --- [greeting] [http-nio-8080-exec-3] c.f.g.w.exceptions.ExceptionController   : No static resource favicon.ico.
-2026-02-25T09:21:05.001+01:00  WARN 20580 --- [greeting] [http-nio-8080-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
-2026-02-25T09:21:20.821+01:00 ERROR 20580 --- [greeting] [http-nio-8080-exec-6] c.f.g.w.exceptions.ExceptionController   : No static resource favicon.ico.
-2026-02-25T09:21:20.823+01:00  WARN 20580 --- [greeting] [http-nio-8080-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
-2026-02-25T09:22:43.326+01:00 ERROR 20580 --- [greeting] [http-nio-8080-exec-9] c.f.g.w.exceptions.ExceptionController   : No static resource favicon.ico.
-2026-02-25T09:22:43.329+01:00  WARN 20580 --- [greeting] [http-nio-8080-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
-2026-02-25T09:23:14.739+01:00 ERROR 20580 --- [greeting] [http-nio-8080-exec-1] c.f.g.w.exceptions.ExceptionController   : No static resource favicon.ico.
-2026-02-25T09:23:14.747+01:00  WARN 20580 --- [greeting] [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
-2026-02-25T09:24:31.062+01:00 ERROR 20580 --- [greeting] [http-nio-8080-exec-3] c.f.g.w.exceptions.ExceptionController   : No static resource favicon.ico.
-2026-02-25T09:24:31.063+01:00  WARN 20580 --- [greeting] [http-nio-8080-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
-2026-02-25T09:26:12.495+01:00 ERROR 20580 --- [greeting] [http-nio-8080-exec-7] c.f.g.w.exceptions.ExceptionController   : No static resource favicon.ico.
-2026-02-25T09:26:12.498+01:00  WARN 20580 --- [greeting] [http-nio-8080-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
-2026-02-25T09:27:54.562+01:00  INFO 20580 --- [greeting] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
-2026-02-25T09:27:54.564+01:00  INFO 20580 --- [greeting] [Thread-23] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2026-02-25T09:27:55.452+01:00  INFO 20580 --- [greeting] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2026-02-25T09:27:55.562+01:00  INFO 20580 --- [greeting] [restartedMain] com.fsb.greeting.GreetingApplication     : Starting GreetingApplication using Java 17.0.10 with PID 20580 (E:\FSB\Mes matières\s2\Spring Boot GLSI2\2025-2026\ws-2026\greeting\target\classes started by adem in E:\FSB\Mes matières\s2\Spring Boot GLSI2\2025-2026\ws-2026\greeting)
-2026-02-25T09:27:55.567+01:00  INFO 20580 --- [greeting] [restartedMain] com.fsb.greeting.GreetingApplication     : No active profile set, falling back to 1 default profile: "default"
-2026-02-25T09:27:55.839+01:00  INFO 20580 --- [greeting] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2026-02-25T09:27:55.841+01:00  INFO 20580 --- [greeting] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-02-25T09:27:55.842+01:00  INFO 20580 --- [greeting] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.50]
-2026-02-25T09:27:55.871+01:00  INFO 20580 --- [greeting] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-02-25T09:27:55.872+01:00  INFO 20580 --- [greeting] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 270 ms
-2026-02-25T09:27:55.967+01:00  INFO 20580 --- [greeting] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2026-02-25T09:27:55.977+01:00  INFO 20580 --- [greeting] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2026-02-25T09:27:55.987+01:00  INFO 20580 --- [greeting] [restartedMain] com.fsb.greeting.GreetingApplication     : Started GreetingApplication in 0.484 seconds (process running for 2543.846)
-2026-02-25T09:27:55.989+01:00  INFO 20580 --- [greeting] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2026-02-25T09:31:02.212+01:00  INFO 20580 --- [greeting] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-02-25T09:31:02.212+01:00  INFO 20580 --- [greeting] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-02-25T09:31:02.213+01:00  INFO 20580 --- [greeting] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2026-02-25T09:31:02.880+01:00 ERROR 20580 --- [greeting] [http-nio-8080-exec-4] c.f.g.w.exceptions.ExceptionController   : No static resource images/null.
-2026-02-25T09:31:02.901+01:00  WARN 20580 --- [greeting] [http-nio-8080-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource images/null.]
-2026-02-25T09:31:03.358+01:00 ERROR 20580 --- [greeting] [http-nio-8080-exec-6] c.f.g.w.exceptions.ExceptionController   : No static resource favicon.ico.
-2026-02-25T09:31:03.359+01:00  WARN 20580 --- [greeting] [http-nio-8080-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
-2026-02-25T09:31:25.582+01:00 ERROR 20580 --- [greeting] [http-nio-8080-exec-10] c.f.g.w.exceptions.ExceptionController   : No static resource images/null.
-2026-02-25T09:31:25.590+01:00  WARN 20580 --- [greeting] [http-nio-8080-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource images/null.]
-2026-02-25T09:31:25.742+01:00 ERROR 20580 --- [greeting] [http-nio-8080-exec-2] c.f.g.w.exceptions.ExceptionController   : No static resource favicon.ico.
-2026-02-25T09:31:25.749+01:00  WARN 20580 --- [greeting] [http-nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
-2026-02-25T09:31:44.698+01:00 ERROR 20580 --- [greeting] [http-nio-8080-exec-6] c.f.g.w.exceptions.ExceptionController   : No static resource images/null.
-2026-02-25T09:31:44.713+01:00  WARN 20580 --- [greeting] [http-nio-8080-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource images/null.]
-2026-02-25T09:31:44.819+01:00 ERROR 20580 --- [greeting] [http-nio-8080-exec-8] c.f.g.w.exceptions.ExceptionController   : No static resource favicon.ico.
-2026-02-25T09:31:44.821+01:00  WARN 20580 --- [greeting] [http-nio-8080-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
-2026-02-25T09:36:52.434+01:00 ERROR 20580 --- [greeting] [http-nio-8080-exec-5] c.f.g.w.exceptions.ExceptionController   : No static resource favicon.ico.
-2026-02-25T09:36:52.434+01:00  WARN 20580 --- [greeting] [http-nio-8080-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
-2026-02-25T09:43:12.253+01:00 ERROR 20580 --- [greeting] [http-nio-8080-exec-10] c.f.g.w.exceptions.ExceptionController   : No static resource favicon.ico.
-2026-02-25T09:43:12.254+01:00  WARN 20580 --- [greeting] [http-nio-8080-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
-2026-02-25T09:43:17.088+01:00 ERROR 20580 --- [greeting] [http-nio-8080-exec-3] c.f.g.w.exceptions.ExceptionController   : No static resource persons/create.
-2026-02-25T09:43:17.091+01:00  WARN 20580 --- [greeting] [http-nio-8080-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource persons/create.]
-2026-02-25T09:43:17.358+01:00 ERROR 20580 --- [greeting] [http-nio-8080-exec-2] c.f.g.w.exceptions.ExceptionController   : No static resource favicon.ico.
-2026-02-25T09:43:17.360+01:00  WARN 20580 --- [greeting] [http-nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
-2026-02-25T09:43:33.557+01:00  INFO 20580 --- [greeting] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
-2026-02-25T09:43:33.560+01:00  INFO 20580 --- [greeting] [Thread-27] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2026-02-25T09:43:34.089+01:00  INFO 20580 --- [greeting] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2026-02-25T09:43:34.200+01:00  INFO 20580 --- [greeting] [restartedMain] com.fsb.greeting.GreetingApplication     : Starting GreetingApplication using Java 17.0.10 with PID 20580 (E:\FSB\Mes matières\s2\Spring Boot GLSI2\2025-2026\ws-2026\greeting\target\classes started by adem in E:\FSB\Mes matières\s2\Spring Boot GLSI2\2025-2026\ws-2026\greeting)
-2026-02-25T09:43:34.201+01:00  INFO 20580 --- [greeting] [restartedMain] com.fsb.greeting.GreetingApplication     : No active profile set, falling back to 1 default profile: "default"
-2026-02-25T09:43:34.529+01:00  INFO 20580 --- [greeting] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2026-02-25T09:43:34.534+01:00  INFO 20580 --- [greeting] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-02-25T09:43:34.536+01:00  INFO 20580 --- [greeting] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.50]
-2026-02-25T09:43:34.572+01:00  INFO 20580 --- [greeting] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-02-25T09:43:34.573+01:00  INFO 20580 --- [greeting] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 370 ms
-2026-02-25T09:43:34.702+01:00  INFO 20580 --- [greeting] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2026-02-25T09:43:34.711+01:00  INFO 20580 --- [greeting] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2026-02-25T09:43:34.724+01:00  INFO 20580 --- [greeting] [restartedMain] com.fsb.greeting.GreetingApplication     : Started GreetingApplication in 0.555 seconds (process running for 3482.583)
-2026-02-25T09:43:34.728+01:00  INFO 20580 --- [greeting] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2026-02-25T09:43:34.962+01:00  INFO 20580 --- [greeting] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-02-25T09:43:34.964+01:00  INFO 20580 --- [greeting] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-02-25T09:43:34.965+01:00  INFO 20580 --- [greeting] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2026-02-25T09:43:35.242+01:00 ERROR 20580 --- [greeting] [http-nio-8080-exec-6] c.f.g.w.exceptions.ExceptionController   : No static resource favicon.ico.
-2026-02-25T09:43:35.244+01:00  WARN 20580 --- [greeting] [http-nio-8080-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
-2026-02-25T09:43:36.791+01:00 ERROR 20580 --- [greeting] [http-nio-8080-exec-8] c.f.g.w.exceptions.ExceptionController   : No static resource favicon.ico.
-2026-02-25T09:43:36.807+01:00  WARN 20580 --- [greeting] [http-nio-8080-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
-2026-02-25T09:43:43.479+01:00 ERROR 20580 --- [greeting] [http-nio-8080-exec-9] c.f.g.w.exceptions.ExceptionController   : No static resource favicon.ico.
-2026-02-25T09:43:43.484+01:00  WARN 20580 --- [greeting] [http-nio-8080-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
-2026-02-25T09:43:49.007+01:00 ERROR 20580 --- [greeting] [http-nio-8080-exec-1] c.f.g.w.exceptions.ExceptionController   : No static resource favicon.ico.
-2026-02-25T09:43:49.008+01:00  WARN 20580 --- [greeting] [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2026-03-04T08:38:15.453+01:00  INFO 9508 --- [greeting] [restartedMain] com.fsb.greeting.GreetingApplication     : Starting GreetingApplication using Java 17.0.10 with PID 9508 (E:\FSB\Mes matières\s2\Spring Boot GLSI2\2025-2026\ws-2026\greeting\target\classes started by adem in E:\FSB\Mes matières\s2\Spring Boot GLSI2\2025-2026\ws-2026\greeting)
+2026-03-04T08:38:15.479+01:00  INFO 9508 --- [greeting] [restartedMain] com.fsb.greeting.GreetingApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-03-04T08:38:15.655+01:00  INFO 9508 --- [greeting] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-03-04T08:38:15.669+01:00  INFO 9508 --- [greeting] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-03-04T08:38:19.109+01:00  INFO 9508 --- [greeting] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-03-04T08:38:19.147+01:00  INFO 9508 --- [greeting] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-04T08:38:19.149+01:00  INFO 9508 --- [greeting] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.50]
+2026-03-04T08:38:19.257+01:00  INFO 9508 --- [greeting] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-03-04T08:38:19.260+01:00  INFO 9508 --- [greeting] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3547 ms
+2026-03-04T08:38:20.336+01:00  INFO 9508 --- [greeting] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-03-04T08:38:20.439+01:00  INFO 9508 --- [greeting] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-03-04T08:38:20.479+01:00  INFO 9508 --- [greeting] [restartedMain] com.fsb.greeting.GreetingApplication     : Started GreetingApplication in 6.119 seconds (process running for 7.097)
+2026-03-04T08:39:15.201+01:00  INFO 9508 --- [greeting] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-04T08:39:15.203+01:00  INFO 9508 --- [greeting] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-03-04T08:39:15.205+01:00  INFO 9508 --- [greeting] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-03-04T08:39:15.294+01:00 ERROR 9508 --- [greeting] [http-nio-8080-exec-1] c.f.g.w.exceptions.ExceptionController   : Required request parameter 'age' for method parameter type int is not present
+2026-03-04T08:39:15.302+01:00  WARN 9508 --- [greeting] [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'age' for method parameter type int is not present]
+2026-03-04T08:39:28.405+01:00 ERROR 9508 --- [greeting] [http-nio-8080-exec-7] c.f.g.w.exceptions.ExceptionController   : No static resource favicon.ico.
+2026-03-04T08:39:28.408+01:00  WARN 9508 --- [greeting] [http-nio-8080-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2026-03-04T08:39:40.470+01:00 ERROR 9508 --- [greeting] [http-nio-8080-exec-9] c.f.g.w.exceptions.ExceptionController   : No static resource favicon.ico.
+2026-03-04T08:39:40.471+01:00  WARN 9508 --- [greeting] [http-nio-8080-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2026-03-04T08:39:49.216+01:00 ERROR 9508 --- [greeting] [http-nio-8080-exec-10] c.f.g.w.exceptions.ExceptionController   : No static resource favicon.ico.
+2026-03-04T08:39:49.223+01:00  WARN 9508 --- [greeting] [http-nio-8080-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2026-03-04T08:48:23.499+01:00 ERROR 9508 --- [greeting] [http-nio-8080-exec-2] c.f.g.w.exceptions.ExceptionController   : No static resource favicon.ico.
+2026-03-04T08:48:23.500+01:00  WARN 9508 --- [greeting] [http-nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2026-03-04T08:50:29.985+01:00 ERROR 9508 --- [greeting] [http-nio-8080-exec-6] c.f.g.w.exceptions.ExceptionController   : No static resource favicon.ico.
+2026-03-04T08:50:29.987+01:00  WARN 9508 --- [greeting] [http-nio-8080-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2026-03-04T08:50:31.484+01:00 ERROR 9508 --- [greeting] [http-nio-8080-exec-1] c.f.g.w.exceptions.ExceptionController   : No static resource favicon.ico.
+2026-03-04T08:50:31.501+01:00  WARN 9508 --- [greeting] [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2026-03-04T08:54:02.497+01:00 ERROR 9508 --- [greeting] [http-nio-8080-exec-4] c.f.g.w.exceptions.ExceptionController   : No static resource favicon.ico.
+2026-03-04T08:54:02.499+01:00  WARN 9508 --- [greeting] [http-nio-8080-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2026-03-04T08:57:27.353+01:00  INFO 9508 --- [greeting] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2026-03-04T08:57:27.372+01:00  INFO 9508 --- [greeting] [Thread-5] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-04T08:57:28.044+01:00  INFO 9508 --- [greeting] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-03-04T08:57:28.271+01:00  INFO 9508 --- [greeting] [restartedMain] com.fsb.greeting.GreetingApplication     : Starting GreetingApplication using Java 17.0.10 with PID 9508 (E:\FSB\Mes matières\s2\Spring Boot GLSI2\2025-2026\ws-2026\greeting\target\classes started by adem in E:\FSB\Mes matières\s2\Spring Boot GLSI2\2025-2026\ws-2026\greeting)
+2026-03-04T08:57:28.341+01:00  INFO 9508 --- [greeting] [restartedMain] com.fsb.greeting.GreetingApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-03-04T08:57:29.495+01:00  INFO 9508 --- [greeting] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-03-04T08:57:29.521+01:00  INFO 9508 --- [greeting] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-04T08:57:29.527+01:00  INFO 9508 --- [greeting] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.50]
+2026-03-04T08:57:29.656+01:00  INFO 9508 --- [greeting] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-03-04T08:57:29.671+01:00  INFO 9508 --- [greeting] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1262 ms
+2026-03-04T08:57:29.995+01:00  INFO 9508 --- [greeting] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-03-04T08:57:30.020+01:00  INFO 9508 --- [greeting] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-03-04T08:57:30.041+01:00  INFO 9508 --- [greeting] [restartedMain] com.fsb.greeting.GreetingApplication     : Started GreetingApplication in 1.862 seconds (process running for 1156.659)
+2026-03-04T08:57:30.059+01:00  INFO 9508 --- [greeting] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-03-04T08:58:03.312+01:00  INFO 9508 --- [greeting] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-03-04T08:58:03.320+01:00  INFO 9508 --- [greeting] [Thread-7] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-04T08:58:03.763+01:00  INFO 9508 --- [greeting] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-03-04T08:58:03.941+01:00  INFO 9508 --- [greeting] [restartedMain] com.fsb.greeting.GreetingApplication     : Starting GreetingApplication using Java 17.0.10 with PID 9508 (E:\FSB\Mes matières\s2\Spring Boot GLSI2\2025-2026\ws-2026\greeting\target\classes started by adem in E:\FSB\Mes matières\s2\Spring Boot GLSI2\2025-2026\ws-2026\greeting)
+2026-03-04T08:58:03.989+01:00  INFO 9508 --- [greeting] [restartedMain] com.fsb.greeting.GreetingApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-03-04T08:58:04.367+01:00  INFO 9508 --- [greeting] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-03-04T08:58:04.378+01:00  INFO 9508 --- [greeting] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-04T08:58:04.379+01:00  INFO 9508 --- [greeting] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.50]
+2026-03-04T08:58:04.420+01:00  INFO 9508 --- [greeting] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-03-04T08:58:04.421+01:00  INFO 9508 --- [greeting] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 394 ms
+2026-03-04T08:58:04.543+01:00  INFO 9508 --- [greeting] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-03-04T08:58:04.554+01:00  INFO 9508 --- [greeting] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-03-04T08:58:04.566+01:00  INFO 9508 --- [greeting] [restartedMain] com.fsb.greeting.GreetingApplication     : Started GreetingApplication in 0.756 seconds (process running for 1191.184)
+2026-03-04T08:58:04.569+01:00  INFO 9508 --- [greeting] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-03-04T08:58:07.000+01:00  INFO 9508 --- [greeting] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-03-04T08:58:07.003+01:00  INFO 9508 --- [greeting] [Thread-11] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-04T08:58:07.405+01:00  INFO 9508 --- [greeting] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-03-04T08:58:07.496+01:00  INFO 9508 --- [greeting] [restartedMain] com.fsb.greeting.GreetingApplication     : Starting GreetingApplication using Java 17.0.10 with PID 9508 (E:\FSB\Mes matières\s2\Spring Boot GLSI2\2025-2026\ws-2026\greeting\target\classes started by adem in E:\FSB\Mes matières\s2\Spring Boot GLSI2\2025-2026\ws-2026\greeting)
+2026-03-04T08:58:07.503+01:00  INFO 9508 --- [greeting] [restartedMain] com.fsb.greeting.GreetingApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-03-04T08:58:08.219+01:00  INFO 9508 --- [greeting] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-03-04T08:58:08.587+01:00  INFO 9508 --- [greeting] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-04T08:58:08.694+01:00  INFO 9508 --- [greeting] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.50]
+2026-03-04T08:58:08.751+01:00  INFO 9508 --- [greeting] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-03-04T08:58:08.845+01:00  INFO 9508 --- [greeting] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1324 ms
+2026-03-04T08:58:09.272+01:00  INFO 9508 --- [greeting] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-03-04T08:58:09.309+01:00  INFO 9508 --- [greeting] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-03-04T08:58:09.326+01:00  INFO 9508 --- [greeting] [restartedMain] com.fsb.greeting.GreetingApplication     : Started GreetingApplication in 1.873 seconds (process running for 1195.945)
+2026-03-04T08:58:09.360+01:00  INFO 9508 --- [greeting] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-03-04T08:59:04.960+01:00  INFO 9508 --- [greeting] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-03-04T08:59:04.962+01:00  INFO 9508 --- [greeting] [Thread-15] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-04T08:59:05.399+01:00  INFO 9508 --- [greeting] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-03-04T08:59:05.488+01:00  INFO 9508 --- [greeting] [restartedMain] com.fsb.greeting.GreetingApplication     : Starting GreetingApplication using Java 17.0.10 with PID 9508 (E:\FSB\Mes matières\s2\Spring Boot GLSI2\2025-2026\ws-2026\greeting\target\classes started by adem in E:\FSB\Mes matières\s2\Spring Boot GLSI2\2025-2026\ws-2026\greeting)
+2026-03-04T08:59:05.494+01:00  INFO 9508 --- [greeting] [restartedMain] com.fsb.greeting.GreetingApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-03-04T08:59:06.043+01:00  INFO 9508 --- [greeting] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-03-04T08:59:06.044+01:00  INFO 9508 --- [greeting] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-04T08:59:06.049+01:00  INFO 9508 --- [greeting] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.50]
+2026-03-04T08:59:06.091+01:00  INFO 9508 --- [greeting] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-03-04T08:59:06.093+01:00  INFO 9508 --- [greeting] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 590 ms
+2026-03-04T08:59:06.243+01:00  INFO 9508 --- [greeting] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-03-04T08:59:06.270+01:00  INFO 9508 --- [greeting] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-03-04T08:59:06.278+01:00  INFO 9508 --- [greeting] [restartedMain] com.fsb.greeting.GreetingApplication     : Started GreetingApplication in 0.834 seconds (process running for 1252.896)
+2026-03-04T08:59:06.309+01:00  INFO 9508 --- [greeting] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-03-04T09:01:24.627+01:00  INFO 9508 --- [greeting] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-04T09:01:24.627+01:00  INFO 9508 --- [greeting] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-03-04T09:01:24.628+01:00  INFO 9508 --- [greeting] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-03-04T09:01:25.784+01:00 ERROR 9508 --- [greeting] [http-nio-8080-exec-2] c.f.g.w.exceptions.ExceptionController   : No static resource favicon.ico.
+2026-03-04T09:01:25.789+01:00  WARN 9508 --- [greeting] [http-nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2026-03-04T09:01:29.230+01:00 ERROR 9508 --- [greeting] [http-nio-8080-exec-3] c.f.g.w.exceptions.ExceptionController   : No static resource favicon.ico.
+2026-03-04T09:01:29.240+01:00  WARN 9508 --- [greeting] [http-nio-8080-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2026-03-04T09:01:33.779+01:00 ERROR 9508 --- [greeting] [http-nio-8080-exec-4] c.f.g.w.exceptions.ExceptionController   : No static resource .well-known/appspecific/com.chrome.devtools.json.
+2026-03-04T09:01:33.895+01:00  WARN 9508 --- [greeting] [http-nio-8080-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource .well-known/appspecific/com.chrome.devtools.json.]
+2026-03-04T09:02:09.536+01:00 ERROR 9508 --- [greeting] [http-nio-8080-exec-6] c.f.g.w.exceptions.ExceptionController   : No static resource .well-known/appspecific/com.chrome.devtools.json.
+2026-03-04T09:02:09.542+01:00  WARN 9508 --- [greeting] [http-nio-8080-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource .well-known/appspecific/com.chrome.devtools.json.]
+2026-03-04T09:02:10.822+01:00 ERROR 9508 --- [greeting] [http-nio-8080-exec-7] c.f.g.w.exceptions.ExceptionController   : No static resource favicon.ico.
+2026-03-04T09:02:10.824+01:00  WARN 9508 --- [greeting] [http-nio-8080-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2026-03-04T09:03:16.924+01:00 ERROR 9508 --- [greeting] [http-nio-8080-exec-9] c.f.g.w.exceptions.ExceptionController   : No static resource .well-known/appspecific/com.chrome.devtools.json.
+2026-03-04T09:03:16.928+01:00  WARN 9508 --- [greeting] [http-nio-8080-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource .well-known/appspecific/com.chrome.devtools.json.]
+2026-03-04T09:03:18.092+01:00 ERROR 9508 --- [greeting] [http-nio-8080-exec-10] c.f.g.w.exceptions.ExceptionController   : No static resource favicon.ico.
+2026-03-04T09:03:18.104+01:00  WARN 9508 --- [greeting] [http-nio-8080-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2026-03-04T09:03:27.584+01:00 ERROR 9508 --- [greeting] [http-nio-8080-exec-2] c.f.g.w.exceptions.ExceptionController   : No static resource .well-known/appspecific/com.chrome.devtools.json.
+2026-03-04T09:03:27.588+01:00  WARN 9508 --- [greeting] [http-nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource .well-known/appspecific/com.chrome.devtools.json.]
+2026-03-04T09:03:28.593+01:00 ERROR 9508 --- [greeting] [http-nio-8080-exec-3] c.f.g.w.exceptions.ExceptionController   : No static resource favicon.ico.
+2026-03-04T09:03:28.597+01:00  WARN 9508 --- [greeting] [http-nio-8080-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2026-03-04T09:04:59.867+01:00 ERROR 9508 --- [greeting] [http-nio-8080-exec-5] c.f.g.w.exceptions.ExceptionController   : No static resource .well-known/appspecific/com.chrome.devtools.json.
+2026-03-04T09:04:59.868+01:00  WARN 9508 --- [greeting] [http-nio-8080-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource .well-known/appspecific/com.chrome.devtools.json.]
+2026-03-04T09:05:01.133+01:00 ERROR 9508 --- [greeting] [http-nio-8080-exec-6] c.f.g.w.exceptions.ExceptionController   : No static resource favicon.ico.
+2026-03-04T09:05:01.137+01:00  WARN 9508 --- [greeting] [http-nio-8080-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2026-03-04T09:05:55.176+01:00 ERROR 9508 --- [greeting] [http-nio-8080-exec-8] c.f.g.w.exceptions.ExceptionController   : No static resource .well-known/appspecific/com.chrome.devtools.json.
+2026-03-04T09:05:55.181+01:00  WARN 9508 --- [greeting] [http-nio-8080-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource .well-known/appspecific/com.chrome.devtools.json.]
+2026-03-04T09:05:56.297+01:00 ERROR 9508 --- [greeting] [http-nio-8080-exec-9] c.f.g.w.exceptions.ExceptionController   : No static resource favicon.ico.
+2026-03-04T09:05:56.408+01:00  WARN 9508 --- [greeting] [http-nio-8080-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2026-03-04T09:12:01.137+01:00  INFO 9508 --- [greeting] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-03-04T09:12:01.140+01:00  INFO 9508 --- [greeting] [Thread-19] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-04T09:12:01.493+01:00  INFO 9508 --- [greeting] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-03-04T09:12:01.621+01:00  INFO 9508 --- [greeting] [restartedMain] com.fsb.greeting.GreetingApplication     : Starting GreetingApplication using Java 17.0.10 with PID 9508 (E:\FSB\Mes matières\s2\Spring Boot GLSI2\2025-2026\ws-2026\greeting\target\classes started by adem in E:\FSB\Mes matières\s2\Spring Boot GLSI2\2025-2026\ws-2026\greeting)
+2026-03-04T09:12:01.622+01:00  INFO 9508 --- [greeting] [restartedMain] com.fsb.greeting.GreetingApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-03-04T09:12:01.854+01:00  INFO 9508 --- [greeting] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-03-04T09:12:01.855+01:00  INFO 9508 --- [greeting] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-04T09:12:01.855+01:00  INFO 9508 --- [greeting] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.50]
+2026-03-04T09:12:01.923+01:00  INFO 9508 --- [greeting] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-03-04T09:12:01.982+01:00  INFO 9508 --- [greeting] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 356 ms
+2026-03-04T09:12:02.099+01:00  INFO 9508 --- [greeting] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-03-04T09:12:02.121+01:00  INFO 9508 --- [greeting] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-03-04T09:12:02.126+01:00  INFO 9508 --- [greeting] [restartedMain] com.fsb.greeting.GreetingApplication     : Started GreetingApplication in 0.565 seconds (process running for 2028.744)
+2026-03-04T09:12:02.128+01:00  INFO 9508 --- [greeting] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-03-04T09:12:15.148+01:00  INFO 9508 --- [greeting] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-04T09:12:15.154+01:00  INFO 9508 --- [greeting] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-03-04T09:12:15.159+01:00  INFO 9508 --- [greeting] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-03-04T09:12:17.299+01:00 ERROR 9508 --- [greeting] [http-nio-8080-exec-4] c.f.g.w.exceptions.ExceptionController   : No static resource .well-known/appspecific/com.chrome.devtools.json.
+2026-03-04T09:12:17.304+01:00  WARN 9508 --- [greeting] [http-nio-8080-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource .well-known/appspecific/com.chrome.devtools.json.]
+2026-03-04T09:12:19.937+01:00 ERROR 9508 --- [greeting] [http-nio-8080-exec-6] c.f.g.w.exceptions.ExceptionController   : No static resource favicon.ico.
+2026-03-04T09:12:19.964+01:00  WARN 9508 --- [greeting] [http-nio-8080-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2026-03-04T09:12:23.722+01:00 ERROR 9508 --- [greeting] [http-nio-8080-exec-8] c.f.g.w.exceptions.ExceptionController   : No static resource .well-known/appspecific/com.chrome.devtools.json.
+2026-03-04T09:12:23.731+01:00  WARN 9508 --- [greeting] [http-nio-8080-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource .well-known/appspecific/com.chrome.devtools.json.]
+2026-03-04T09:12:25.038+01:00 ERROR 9508 --- [greeting] [http-nio-8080-exec-9] c.f.g.w.exceptions.ExceptionController   : No static resource favicon.ico.
+2026-03-04T09:12:25.088+01:00  WARN 9508 --- [greeting] [http-nio-8080-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2026-03-04T09:12:53.440+01:00 ERROR 9508 --- [greeting] [http-nio-8080-exec-10] org.thymeleaf.TemplateEngine             : [THYMELEAF][http-nio-8080-exec-10] Exception processing template "": Error resolving template [], template might not exist or might not be accessible by any of the configured Template Resolvers
+
+org.thymeleaf.exceptions.TemplateInputException: Error resolving template [], template might not exist or might not be accessible by any of the configured Template Resolvers
+	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:869) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:607) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1103) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1077) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.spring6.view.ThymeleafView.renderFragment(ThymeleafView.java:372) ~[thymeleaf-spring6-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.spring6.view.ThymeleafView.render(ThymeleafView.java:192) ~[thymeleaf-spring6-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1438) ~[spring-webmvc-6.2.15.jar:6.2.15]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1168) ~[spring-webmvc-6.2.15.jar:6.2.15]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1106) ~[spring-webmvc-6.2.15.jar:6.2.15]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.2.15.jar:6.2.15]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.15.jar:6.2.15]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.2.15.jar:6.2.15]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.50.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.15.jar:6.2.15]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.50.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.50.jar:10.1.50]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.15.jar:6.2.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.15.jar:6.2.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.15.jar:6.2.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.15.jar:6.2.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.15.jar:6.2.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.15.jar:6.2.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1774) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
+
+2026-03-04T09:12:53.652+01:00 ERROR 9508 --- [greeting] [http-nio-8080-exec-10] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.thymeleaf.exceptions.TemplateInputException: Error resolving template [], template might not exist or might not be accessible by any of the configured Template Resolvers] with root cause
+
+org.thymeleaf.exceptions.TemplateInputException: Error resolving template [], template might not exist or might not be accessible by any of the configured Template Resolvers
+	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:869) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:607) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1103) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1077) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.spring6.view.ThymeleafView.renderFragment(ThymeleafView.java:372) ~[thymeleaf-spring6-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.spring6.view.ThymeleafView.render(ThymeleafView.java:192) ~[thymeleaf-spring6-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1438) ~[spring-webmvc-6.2.15.jar:6.2.15]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1168) ~[spring-webmvc-6.2.15.jar:6.2.15]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1106) ~[spring-webmvc-6.2.15.jar:6.2.15]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.2.15.jar:6.2.15]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.15.jar:6.2.15]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.2.15.jar:6.2.15]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.50.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.15.jar:6.2.15]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.50.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.50.jar:10.1.50]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.15.jar:6.2.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.15.jar:6.2.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.15.jar:6.2.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.15.jar:6.2.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.15.jar:6.2.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.15.jar:6.2.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1774) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
+
+2026-03-04T09:12:55.560+01:00 ERROR 9508 --- [greeting] [http-nio-8080-exec-1] c.f.g.w.exceptions.ExceptionController   : No static resource .well-known/appspecific/com.chrome.devtools.json.
+2026-03-04T09:12:55.574+01:00  WARN 9508 --- [greeting] [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource .well-known/appspecific/com.chrome.devtools.json.]
+2026-03-04T09:12:56.691+01:00 ERROR 9508 --- [greeting] [http-nio-8080-exec-3] c.f.g.w.exceptions.ExceptionController   : No static resource favicon.ico.
+2026-03-04T09:12:56.727+01:00  WARN 9508 --- [greeting] [http-nio-8080-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2026-03-04T09:18:13.096+01:00  INFO 9508 --- [greeting] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-03-04T09:18:13.098+01:00  INFO 9508 --- [greeting] [Thread-23] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-04T09:18:13.401+01:00  INFO 9508 --- [greeting] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-03-04T09:18:13.516+01:00  INFO 9508 --- [greeting] [restartedMain] com.fsb.greeting.GreetingApplication     : Starting GreetingApplication using Java 17.0.10 with PID 9508 (E:\FSB\Mes matières\s2\Spring Boot GLSI2\2025-2026\ws-2026\greeting\target\classes started by adem in E:\FSB\Mes matières\s2\Spring Boot GLSI2\2025-2026\ws-2026\greeting)
+2026-03-04T09:18:13.520+01:00  INFO 9508 --- [greeting] [restartedMain] com.fsb.greeting.GreetingApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-03-04T09:18:13.762+01:00  INFO 9508 --- [greeting] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-03-04T09:18:13.763+01:00  INFO 9508 --- [greeting] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-04T09:18:13.764+01:00  INFO 9508 --- [greeting] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.50]
+2026-03-04T09:18:13.796+01:00  INFO 9508 --- [greeting] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-03-04T09:18:13.797+01:00  INFO 9508 --- [greeting] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 274 ms
+2026-03-04T09:18:13.890+01:00  INFO 9508 --- [greeting] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-03-04T09:18:13.907+01:00  INFO 9508 --- [greeting] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-03-04T09:18:13.913+01:00  INFO 9508 --- [greeting] [restartedMain] com.fsb.greeting.GreetingApplication     : Started GreetingApplication in 0.431 seconds (process running for 2400.531)
+2026-03-04T09:18:13.923+01:00  INFO 9508 --- [greeting] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-03-04T09:19:08.440+01:00  INFO 9508 --- [greeting] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-03-04T09:19:08.524+01:00  INFO 9508 --- [greeting] [Thread-27] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-04T09:19:09.494+01:00  INFO 9508 --- [greeting] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-03-04T09:19:09.667+01:00  INFO 9508 --- [greeting] [restartedMain] com.fsb.greeting.GreetingApplication     : Starting GreetingApplication using Java 17.0.10 with PID 9508 (E:\FSB\Mes matières\s2\Spring Boot GLSI2\2025-2026\ws-2026\greeting\target\classes started by adem in E:\FSB\Mes matières\s2\Spring Boot GLSI2\2025-2026\ws-2026\greeting)
+2026-03-04T09:19:09.675+01:00  INFO 9508 --- [greeting] [restartedMain] com.fsb.greeting.GreetingApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-03-04T09:19:10.061+01:00  INFO 9508 --- [greeting] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-03-04T09:19:10.062+01:00  INFO 9508 --- [greeting] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-04T09:19:10.063+01:00  INFO 9508 --- [greeting] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.50]
+2026-03-04T09:19:10.097+01:00  INFO 9508 --- [greeting] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-03-04T09:19:10.098+01:00  INFO 9508 --- [greeting] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 420 ms
+2026-03-04T09:19:10.191+01:00  INFO 9508 --- [greeting] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-03-04T09:19:10.214+01:00  INFO 9508 --- [greeting] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-03-04T09:19:10.225+01:00  INFO 9508 --- [greeting] [restartedMain] com.fsb.greeting.GreetingApplication     : Started GreetingApplication in 0.617 seconds (process running for 2456.842)
+2026-03-04T09:19:10.228+01:00  INFO 9508 --- [greeting] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-03-04T09:19:11.728+01:00  INFO 9508 --- [greeting] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-04T09:19:11.731+01:00  INFO 9508 --- [greeting] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-03-04T09:19:11.733+01:00  INFO 9508 --- [greeting] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-03-04T09:19:11.747+01:00 ERROR 9508 --- [greeting] [http-nio-8080-exec-1] c.f.g.w.exceptions.ExceptionController   : No static resource .well-known/appspecific/com.chrome.devtools.json.
+2026-03-04T09:19:11.764+01:00  WARN 9508 --- [greeting] [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource .well-known/appspecific/com.chrome.devtools.json.]
+2026-03-04T09:19:13.117+01:00 ERROR 9508 --- [greeting] [http-nio-8080-exec-2] c.f.g.w.exceptions.ExceptionController   : No static resource favicon.ico.
+2026-03-04T09:19:13.122+01:00  WARN 9508 --- [greeting] [http-nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2026-03-04T09:19:16.478+01:00 ERROR 9508 --- [greeting] [http-nio-8080-exec-4] c.f.g.w.exceptions.ExceptionController   : No static resource .well-known/appspecific/com.chrome.devtools.json.
+2026-03-04T09:19:16.480+01:00  WARN 9508 --- [greeting] [http-nio-8080-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource .well-known/appspecific/com.chrome.devtools.json.]
+2026-03-04T09:19:17.470+01:00 ERROR 9508 --- [greeting] [http-nio-8080-exec-5] c.f.g.w.exceptions.ExceptionController   : No static resource favicon.ico.
+2026-03-04T09:19:17.476+01:00  WARN 9508 --- [greeting] [http-nio-8080-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2026-03-04T09:19:27.158+01:00 ERROR 9508 --- [greeting] [http-nio-8080-exec-8] c.f.g.w.exceptions.ExceptionController   : No static resource .well-known/appspecific/com.chrome.devtools.json.
+2026-03-04T09:19:27.164+01:00  WARN 9508 --- [greeting] [http-nio-8080-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource .well-known/appspecific/com.chrome.devtools.json.]
+2026-03-04T09:19:27.549+01:00 ERROR 9508 --- [greeting] [http-nio-8080-exec-2] c.f.g.w.exceptions.ExceptionController   : No static resource images.
+2026-03-04T09:19:27.616+01:00  WARN 9508 --- [greeting] [http-nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource images.]
+2026-03-04T09:19:29.609+01:00 ERROR 9508 --- [greeting] [http-nio-8080-exec-3] c.f.g.w.exceptions.ExceptionController   : No static resource favicon.ico.
+2026-03-04T09:19:29.617+01:00  WARN 9508 --- [greeting] [http-nio-8080-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2026-03-04T09:19:51.997+01:00 ERROR 9508 --- [greeting] [http-nio-8080-exec-5] c.f.g.w.exceptions.ExceptionController   : No static resource .well-known/appspecific/com.chrome.devtools.json.
+2026-03-04T09:19:52.000+01:00  WARN 9508 --- [greeting] [http-nio-8080-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource .well-known/appspecific/com.chrome.devtools.json.]
+2026-03-04T09:19:53.101+01:00 ERROR 9508 --- [greeting] [http-nio-8080-exec-6] c.f.g.w.exceptions.ExceptionController   : No static resource favicon.ico.
+2026-03-04T09:19:53.107+01:00  WARN 9508 --- [greeting] [http-nio-8080-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2026-03-04T09:19:57.175+01:00 ERROR 9508 --- [greeting] [http-nio-8080-exec-9] c.f.g.w.exceptions.ExceptionController   : No static resource .well-known/appspecific/com.chrome.devtools.json.
+2026-03-04T09:19:57.185+01:00  WARN 9508 --- [greeting] [http-nio-8080-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource .well-known/appspecific/com.chrome.devtools.json.]
+2026-03-04T09:19:57.601+01:00 ERROR 9508 --- [greeting] [http-nio-8080-exec-2] c.f.g.w.exceptions.ExceptionController   : No static resource images.
+2026-03-04T09:19:57.609+01:00  WARN 9508 --- [greeting] [http-nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource images.]
+2026-03-04T09:19:59.634+01:00 ERROR 9508 --- [greeting] [http-nio-8080-exec-3] c.f.g.w.exceptions.ExceptionController   : No static resource favicon.ico.
+2026-03-04T09:19:59.642+01:00  WARN 9508 --- [greeting] [http-nio-8080-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2026-03-04T09:20:24.279+01:00  INFO 9508 --- [greeting] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-03-04T09:20:24.281+01:00  INFO 9508 --- [greeting] [Thread-31] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-04T09:20:24.626+01:00  INFO 9508 --- [greeting] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-03-04T09:20:24.748+01:00  INFO 9508 --- [greeting] [restartedMain] com.fsb.greeting.GreetingApplication     : Starting GreetingApplication using Java 17.0.10 with PID 9508 (E:\FSB\Mes matières\s2\Spring Boot GLSI2\2025-2026\ws-2026\greeting\target\classes started by adem in E:\FSB\Mes matières\s2\Spring Boot GLSI2\2025-2026\ws-2026\greeting)
+2026-03-04T09:20:24.750+01:00  INFO 9508 --- [greeting] [restartedMain] com.fsb.greeting.GreetingApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-03-04T09:20:25.003+01:00  INFO 9508 --- [greeting] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-03-04T09:20:25.004+01:00  INFO 9508 --- [greeting] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-04T09:20:25.005+01:00  INFO 9508 --- [greeting] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.50]
+2026-03-04T09:20:25.038+01:00  INFO 9508 --- [greeting] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-03-04T09:20:25.038+01:00  INFO 9508 --- [greeting] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 286 ms
+2026-03-04T09:20:25.121+01:00  INFO 9508 --- [greeting] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-03-04T09:20:25.136+01:00  INFO 9508 --- [greeting] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-03-04T09:20:25.145+01:00  INFO 9508 --- [greeting] [restartedMain] com.fsb.greeting.GreetingApplication     : Started GreetingApplication in 0.433 seconds (process running for 2531.762)
+2026-03-04T09:20:25.147+01:00  INFO 9508 --- [greeting] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-03-04T09:20:29.938+01:00  INFO 9508 --- [greeting] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-04T09:20:29.940+01:00  INFO 9508 --- [greeting] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-03-04T09:20:29.941+01:00  INFO 9508 --- [greeting] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-03-04T09:20:32.109+01:00 ERROR 9508 --- [greeting] [http-nio-8080-exec-4] c.f.g.w.exceptions.ExceptionController   : No static resource .well-known/appspecific/com.chrome.devtools.json.
+2026-03-04T09:20:32.179+01:00  WARN 9508 --- [greeting] [http-nio-8080-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource .well-known/appspecific/com.chrome.devtools.json.]
+2026-03-04T09:20:34.647+01:00 ERROR 9508 --- [greeting] [http-nio-8080-exec-6] c.f.g.w.exceptions.ExceptionController   : No static resource favicon.ico.
+2026-03-04T09:20:34.650+01:00  WARN 9508 --- [greeting] [http-nio-8080-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2026-03-04T09:20:47.059+01:00 ERROR 9508 --- [greeting] [http-nio-8080-exec-8] c.f.g.w.exceptions.ExceptionController   : No static resource .well-known/appspecific/com.chrome.devtools.json.
+2026-03-04T09:20:47.060+01:00  WARN 9508 --- [greeting] [http-nio-8080-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource .well-known/appspecific/com.chrome.devtools.json.]
+2026-03-04T09:20:48.058+01:00 ERROR 9508 --- [greeting] [http-nio-8080-exec-9] c.f.g.w.exceptions.ExceptionController   : No static resource favicon.ico.
+2026-03-04T09:20:48.059+01:00  WARN 9508 --- [greeting] [http-nio-8080-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2026-03-04T09:20:54.117+01:00 ERROR 9508 --- [greeting] [http-nio-8080-exec-2] c.f.g.w.exceptions.ExceptionController   : No static resource .well-known/appspecific/com.chrome.devtools.json.
+2026-03-04T09:20:54.133+01:00  WARN 9508 --- [greeting] [http-nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource .well-known/appspecific/com.chrome.devtools.json.]
+2026-03-04T09:20:56.537+01:00 ERROR 9508 --- [greeting] [http-nio-8080-exec-6] c.f.g.w.exceptions.ExceptionController   : No static resource favicon.ico.
+2026-03-04T09:20:56.562+01:00  WARN 9508 --- [greeting] [http-nio-8080-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2026-03-04T09:21:05.162+01:00 ERROR 9508 --- [greeting] [http-nio-8080-exec-8] c.f.g.w.exceptions.ExceptionController   : No static resource .well-known/appspecific/com.chrome.devtools.json.
+2026-03-04T09:21:05.209+01:00  WARN 9508 --- [greeting] [http-nio-8080-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource .well-known/appspecific/com.chrome.devtools.json.]
+2026-03-04T09:21:06.306+01:00 ERROR 9508 --- [greeting] [http-nio-8080-exec-9] c.f.g.w.exceptions.ExceptionController   : No static resource favicon.ico.
+2026-03-04T09:21:06.307+01:00  WARN 9508 --- [greeting] [http-nio-8080-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2026-03-04T09:23:14.964+01:00 ERROR 9508 --- [greeting] [http-nio-8080-exec-1] c.f.g.w.exceptions.ExceptionController   : No static resource .well-known/appspecific/com.chrome.devtools.json.
+2026-03-04T09:23:14.965+01:00  WARN 9508 --- [greeting] [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource .well-known/appspecific/com.chrome.devtools.json.]
+2026-03-04T09:23:16.125+01:00 ERROR 9508 --- [greeting] [http-nio-8080-exec-3] c.f.g.w.exceptions.ExceptionController   : No static resource favicon.ico.
+2026-03-04T09:23:16.127+01:00  WARN 9508 --- [greeting] [http-nio-8080-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2026-03-04T09:28:38.983+01:00  INFO 9508 --- [greeting] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 8 class path changes (0 additions, 0 deletions, 8 modifications)
+2026-03-04T09:28:39.019+01:00  INFO 9508 --- [greeting] [Thread-35] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-04T09:28:39.444+01:00  INFO 9508 --- [greeting] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-03-04T09:28:39.610+01:00  INFO 9508 --- [greeting] [restartedMain] com.fsb.greeting.GreetingApplication     : Starting GreetingApplication using Java 17.0.10 with PID 9508 (E:\FSB\Mes matières\s2\Spring Boot GLSI2\2025-2026\ws-2026\greeting\target\classes started by adem in E:\FSB\Mes matières\s2\Spring Boot GLSI2\2025-2026\ws-2026\greeting)
+2026-03-04T09:28:39.612+01:00  INFO 9508 --- [greeting] [restartedMain] com.fsb.greeting.GreetingApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-03-04T09:28:40.266+01:00  INFO 9508 --- [greeting] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-03-04T09:28:40.267+01:00  INFO 9508 --- [greeting] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-04T09:28:40.268+01:00  INFO 9508 --- [greeting] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.50]
+2026-03-04T09:28:40.308+01:00  INFO 9508 --- [greeting] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-03-04T09:28:40.309+01:00  INFO 9508 --- [greeting] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 692 ms
+2026-03-04T09:28:40.436+01:00  INFO 9508 --- [greeting] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-03-04T09:28:40.477+01:00  INFO 9508 --- [greeting] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-03-04T09:28:40.486+01:00  INFO 9508 --- [greeting] [restartedMain] com.fsb.greeting.GreetingApplication     : Started GreetingApplication in 0.968 seconds (process running for 3027.104)
+2026-03-04T09:28:40.494+01:00  INFO 9508 --- [greeting] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-03-04T09:33:14.444+01:00  INFO 9508 --- [greeting] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-03-04T09:33:14.446+01:00  INFO 9508 --- [greeting] [Thread-39] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-04T09:33:14.599+01:00  INFO 9508 --- [greeting] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-03-04T09:33:14.700+01:00  INFO 9508 --- [greeting] [restartedMain] com.fsb.greeting.GreetingApplication     : Starting GreetingApplication using Java 17.0.10 with PID 9508 (E:\FSB\Mes matières\s2\Spring Boot GLSI2\2025-2026\ws-2026\greeting\target\classes started by adem in E:\FSB\Mes matières\s2\Spring Boot GLSI2\2025-2026\ws-2026\greeting)
+2026-03-04T09:33:14.702+01:00  INFO 9508 --- [greeting] [restartedMain] com.fsb.greeting.GreetingApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-03-04T09:33:14.932+01:00  INFO 9508 --- [greeting] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-03-04T09:33:14.933+01:00  INFO 9508 --- [greeting] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-04T09:33:14.935+01:00  INFO 9508 --- [greeting] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.50]
+2026-03-04T09:33:14.959+01:00  INFO 9508 --- [greeting] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-03-04T09:33:14.960+01:00  INFO 9508 --- [greeting] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 256 ms
+2026-03-04T09:33:15.033+01:00  INFO 9508 --- [greeting] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-03-04T09:33:15.039+01:00  INFO 9508 --- [greeting] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-03-04T09:33:15.054+01:00  INFO 9508 --- [greeting] [restartedMain] com.fsb.greeting.GreetingApplication     : Started GreetingApplication in 0.377 seconds (process running for 3301.672)
+2026-03-04T09:33:15.058+01:00  INFO 9508 --- [greeting] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-03-04T09:37:15.197+01:00  INFO 9508 --- [greeting] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-03-04T09:37:15.203+01:00  INFO 9508 --- [greeting] [Thread-43] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-04T09:37:15.606+01:00  INFO 9508 --- [greeting] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-03-04T09:37:15.716+01:00  INFO 9508 --- [greeting] [restartedMain] com.fsb.greeting.GreetingApplication     : Starting GreetingApplication using Java 17.0.10 with PID 9508 (E:\FSB\Mes matières\s2\Spring Boot GLSI2\2025-2026\ws-2026\greeting\target\classes started by adem in E:\FSB\Mes matières\s2\Spring Boot GLSI2\2025-2026\ws-2026\greeting)
+2026-03-04T09:37:15.719+01:00  INFO 9508 --- [greeting] [restartedMain] com.fsb.greeting.GreetingApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-03-04T09:37:16.075+01:00  INFO 9508 --- [greeting] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-03-04T09:37:16.083+01:00  INFO 9508 --- [greeting] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-04T09:37:16.086+01:00  INFO 9508 --- [greeting] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.50]
+2026-03-04T09:37:16.134+01:00  INFO 9508 --- [greeting] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-03-04T09:37:16.136+01:00  INFO 9508 --- [greeting] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 414 ms
+2026-03-04T09:37:16.271+01:00  INFO 9508 --- [greeting] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-03-04T09:37:16.289+01:00  INFO 9508 --- [greeting] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-03-04T09:37:16.301+01:00  INFO 9508 --- [greeting] [restartedMain] com.fsb.greeting.GreetingApplication     : Started GreetingApplication in 0.622 seconds (process running for 3542.918)
+2026-03-04T09:37:16.303+01:00  INFO 9508 --- [greeting] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-03-04T09:37:55.553+01:00  INFO 9508 --- [greeting] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-03-04T09:37:55.557+01:00  INFO 9508 --- [greeting] [Thread-47] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-04T09:37:55.770+01:00  INFO 9508 --- [greeting] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-03-04T09:37:55.838+01:00  INFO 9508 --- [greeting] [restartedMain] com.fsb.greeting.GreetingApplication     : Starting GreetingApplication using Java 17.0.10 with PID 9508 (E:\FSB\Mes matières\s2\Spring Boot GLSI2\2025-2026\ws-2026\greeting\target\classes started by adem in E:\FSB\Mes matières\s2\Spring Boot GLSI2\2025-2026\ws-2026\greeting)
+2026-03-04T09:37:55.839+01:00  INFO 9508 --- [greeting] [restartedMain] com.fsb.greeting.GreetingApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-03-04T09:37:56.047+01:00  INFO 9508 --- [greeting] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-03-04T09:37:56.049+01:00  INFO 9508 --- [greeting] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-04T09:37:56.050+01:00  INFO 9508 --- [greeting] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.50]
+2026-03-04T09:37:56.069+01:00  INFO 9508 --- [greeting] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-03-04T09:37:56.079+01:00  INFO 9508 --- [greeting] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 237 ms
+2026-03-04T09:37:56.209+01:00  INFO 9508 --- [greeting] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-03-04T09:37:56.218+01:00  INFO 9508 --- [greeting] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-03-04T09:37:56.235+01:00  INFO 9508 --- [greeting] [restartedMain] com.fsb.greeting.GreetingApplication     : Started GreetingApplication in 0.421 seconds (process running for 3582.853)
+2026-03-04T09:37:56.237+01:00  INFO 9508 --- [greeting] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-03-04T09:38:55.031+01:00  INFO 9508 --- [greeting] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-04T09:38:55.031+01:00  INFO 9508 --- [greeting] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-03-04T09:38:55.035+01:00  INFO 9508 --- [greeting] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-03-04T09:38:56.406+01:00 ERROR 9508 --- [greeting] [http-nio-8080-exec-6] c.f.g.w.exceptions.ExceptionController   : No static resource favicon.ico.
+2026-03-04T09:38:56.410+01:00  WARN 9508 --- [greeting] [http-nio-8080-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2026-03-04T09:38:58.496+01:00 ERROR 9508 --- [greeting] [http-nio-8080-exec-8] c.f.g.w.exceptions.ExceptionController   : No static resource favicon.ico.
+2026-03-04T09:38:58.498+01:00  WARN 9508 --- [greeting] [http-nio-8080-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2026-03-04T09:39:05.399+01:00 ERROR 9508 --- [greeting] [http-nio-8080-exec-4] c.f.g.w.exceptions.ExceptionController   : No static resource favicon.ico.
+2026-03-04T09:39:05.400+01:00  WARN 9508 --- [greeting] [http-nio-8080-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2026-03-04T09:39:45.705+01:00  INFO 8732 --- [greeting] [restartedMain] com.fsb.greeting.GreetingApplication     : Starting GreetingApplication using Java 17.0.10 with PID 8732 (E:\FSB\Mes matières\s2\Spring Boot GLSI2\2025-2026\ws-2026\greeting\target\classes started by adem in E:\FSB\Mes matières\s2\Spring Boot GLSI2\2025-2026\ws-2026\greeting)
+2026-03-04T09:39:45.724+01:00  INFO 8732 --- [greeting] [restartedMain] com.fsb.greeting.GreetingApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-03-04T09:39:45.914+01:00  INFO 8732 --- [greeting] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-03-04T09:39:45.916+01:00  INFO 8732 --- [greeting] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-03-04T09:39:48.308+01:00  INFO 8732 --- [greeting] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-03-04T09:39:48.337+01:00  INFO 8732 --- [greeting] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-04T09:39:48.338+01:00  INFO 8732 --- [greeting] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.50]
+2026-03-04T09:39:48.413+01:00  INFO 8732 --- [greeting] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-03-04T09:39:48.413+01:00  INFO 8732 --- [greeting] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2495 ms
+2026-03-04T09:39:49.579+01:00  INFO 8732 --- [greeting] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-03-04T09:39:49.654+01:00  INFO 8732 --- [greeting] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-03-04T09:39:49.688+01:00  INFO 8732 --- [greeting] [restartedMain] com.fsb.greeting.GreetingApplication     : Started GreetingApplication in 4.807 seconds (process running for 5.542)
+2026-03-04T09:39:56.529+01:00  INFO 8732 --- [greeting] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-04T09:39:56.531+01:00  INFO 8732 --- [greeting] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-03-04T09:39:56.533+01:00  INFO 8732 --- [greeting] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-03-04T09:39:57.463+01:00 ERROR 8732 --- [greeting] [http-nio-8080-exec-6] c.f.g.w.exceptions.ExceptionController   : No static resource favicon.ico.
+2026-03-04T09:39:57.466+01:00  WARN 8732 --- [greeting] [http-nio-8080-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2026-03-04T09:39:59.851+01:00 ERROR 8732 --- [greeting] [http-nio-8080-exec-8] c.f.g.w.exceptions.ExceptionController   : No static resource favicon.ico.
+2026-03-04T09:39:59.853+01:00  WARN 8732 --- [greeting] [http-nio-8080-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2026-03-04T09:40:11.040+01:00 ERROR 8732 --- [greeting] [http-nio-8080-exec-10] c.f.g.w.exceptions.ExceptionController   : No static resource favicon.ico.
+2026-03-04T09:40:11.048+01:00  WARN 8732 --- [greeting] [http-nio-8080-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2026-03-04T09:41:55.869+01:00 ERROR 8732 --- [greeting] [http-nio-8080-exec-2] c.f.g.w.exceptions.ExceptionController   : No static resource favicon.ico.
+2026-03-04T09:41:55.870+01:00  WARN 8732 --- [greeting] [http-nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2026-03-04T09:42:01.564+01:00 ERROR 8732 --- [greeting] [http-nio-8080-exec-10] c.f.g.w.exceptions.ExceptionController   : No static resource favicon.ico.
+2026-03-04T09:42:01.566+01:00  WARN 8732 --- [greeting] [http-nio-8080-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2026-03-04T09:42:10.686+01:00 ERROR 8732 --- [greeting] [http-nio-8080-exec-3] c.f.g.w.exceptions.ExceptionController   : No static resource favicon.ico.
+2026-03-04T09:42:10.690+01:00  WARN 8732 --- [greeting] [http-nio-8080-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2026-03-04T09:44:49.391+01:00 ERROR 8732 --- [greeting] [http-nio-8080-exec-5] c.f.g.w.exceptions.ExceptionController   : No static resource favicon.ico.
+2026-03-04T09:44:49.395+01:00  WARN 8732 --- [greeting] [http-nio-8080-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2026-03-04T09:44:56.881+01:00 ERROR 8732 --- [greeting] [http-nio-8080-exec-7] c.f.g.w.exceptions.ExceptionController   : No static resource favicon.ico.
+2026-03-04T09:44:56.882+01:00  WARN 8732 --- [greeting] [http-nio-8080-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2026-03-04T09:45:13.483+01:00 ERROR 8732 --- [greeting] [http-nio-8080-exec-8] c.f.g.w.exceptions.ExceptionController   : No static resource favicon.ico.
+2026-03-04T09:45:13.484+01:00  WARN 8732 --- [greeting] [http-nio-8080-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2026-03-04T09:46:23.454+01:00  INFO 8732 --- [greeting] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-03-04T09:46:23.465+01:00  INFO 8732 --- [greeting] [Thread-5] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-04T09:46:23.699+01:00  INFO 8732 --- [greeting] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-03-04T09:46:23.833+01:00  INFO 8732 --- [greeting] [restartedMain] com.fsb.greeting.GreetingApplication     : Starting GreetingApplication using Java 17.0.10 with PID 8732 (E:\FSB\Mes matières\s2\Spring Boot GLSI2\2025-2026\ws-2026\greeting\target\classes started by adem in E:\FSB\Mes matières\s2\Spring Boot GLSI2\2025-2026\ws-2026\greeting)
+2026-03-04T09:46:23.835+01:00  INFO 8732 --- [greeting] [restartedMain] com.fsb.greeting.GreetingApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-03-04T09:46:24.473+01:00  INFO 8732 --- [greeting] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-03-04T09:46:24.479+01:00  INFO 8732 --- [greeting] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-04T09:46:24.484+01:00  INFO 8732 --- [greeting] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.50]
+2026-03-04T09:46:24.547+01:00  INFO 8732 --- [greeting] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-03-04T09:46:24.555+01:00  INFO 8732 --- [greeting] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 709 ms
+2026-03-04T09:46:25.102+01:00  INFO 8732 --- [greeting] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-03-04T09:46:25.164+01:00  INFO 8732 --- [greeting] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-03-04T09:46:25.183+01:00  INFO 8732 --- [greeting] [restartedMain] com.fsb.greeting.GreetingApplication     : Started GreetingApplication in 1.425 seconds (process running for 401.038)
+2026-03-04T09:46:25.231+01:00  INFO 8732 --- [greeting] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-03-04T09:46:29.775+01:00  INFO 8732 --- [greeting] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-04T09:46:29.777+01:00  INFO 8732 --- [greeting] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-03-04T09:46:29.779+01:00  INFO 8732 --- [greeting] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-03-04T09:46:30.168+01:00 ERROR 8732 --- [greeting] [http-nio-8080-exec-2] c.f.g.w.exceptions.ExceptionController   : No static resource favicon.ico.
+2026-03-04T09:46:30.171+01:00  WARN 8732 --- [greeting] [http-nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2026-03-04T09:46:33.774+01:00 ERROR 8732 --- [greeting] [http-nio-8080-exec-4] c.f.g.w.exceptions.ExceptionController   : No static resource favicon.ico.
+2026-03-04T09:46:33.776+01:00  WARN 8732 --- [greeting] [http-nio-8080-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2026-03-04T09:46:52.131+01:00  INFO 8732 --- [greeting] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-03-04T09:46:52.133+01:00  INFO 8732 --- [greeting] [Thread-7] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-04T09:46:52.317+01:00  INFO 8732 --- [greeting] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-03-04T09:46:52.414+01:00  INFO 8732 --- [greeting] [restartedMain] com.fsb.greeting.GreetingApplication     : Starting GreetingApplication using Java 17.0.10 with PID 8732 (E:\FSB\Mes matières\s2\Spring Boot GLSI2\2025-2026\ws-2026\greeting\target\classes started by adem in E:\FSB\Mes matières\s2\Spring Boot GLSI2\2025-2026\ws-2026\greeting)
+2026-03-04T09:46:52.415+01:00  INFO 8732 --- [greeting] [restartedMain] com.fsb.greeting.GreetingApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-03-04T09:46:52.814+01:00  INFO 8732 --- [greeting] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-03-04T09:46:52.816+01:00  INFO 8732 --- [greeting] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-04T09:46:52.817+01:00  INFO 8732 --- [greeting] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.50]
+2026-03-04T09:46:52.851+01:00  INFO 8732 --- [greeting] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-03-04T09:46:52.853+01:00  INFO 8732 --- [greeting] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 435 ms
+2026-03-04T09:46:53.000+01:00  INFO 8732 --- [greeting] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-03-04T09:46:53.011+01:00  INFO 8732 --- [greeting] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-03-04T09:46:53.019+01:00  INFO 8732 --- [greeting] [restartedMain] com.fsb.greeting.GreetingApplication     : Started GreetingApplication in 0.648 seconds (process running for 428.873)
+2026-03-04T09:46:53.022+01:00  INFO 8732 --- [greeting] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-03-04T09:46:54.558+01:00  INFO 8732 --- [greeting] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-04T09:46:54.561+01:00  INFO 8732 --- [greeting] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-03-04T09:46:54.564+01:00  INFO 8732 --- [greeting] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-03-04T09:46:54.891+01:00 ERROR 8732 --- [greeting] [http-nio-8080-exec-2] c.f.g.w.exceptions.ExceptionController   : No static resource favicon.ico.
+2026-03-04T09:46:54.903+01:00  WARN 8732 --- [greeting] [http-nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]

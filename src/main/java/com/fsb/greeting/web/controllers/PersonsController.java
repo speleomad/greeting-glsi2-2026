@@ -5,10 +5,17 @@ import java.util.List;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.fsb.greeting.web.models.Person;
+import com.fsb.greeting.web.models.requests.PersonForm;
 
+import jakarta.validation.Valid;
 import lombok.Locked.Read;
 
 /* Carte d'opération CRUD
@@ -24,6 +31,7 @@ import lombok.Locked.Read;
  */
 
 @Controller
+@RequestMapping("/persons")
 public class PersonsController {
 
     private static List<Person> persons = new ArrayList<Person>();
@@ -37,20 +45,33 @@ public class PersonsController {
     }
     
     //Read Get  /persons : Récuperer une liste de personne
-    @RequestMapping("/persons")
+   // @RequestMapping("/persons")
+    @GetMapping()
     public String getAllPerson(Model model){
         model.addAttribute("persons", this.persons);
         return "person-list";
     } 
    //Create - Get   /persons/create : Récupérer le formulaire d'ajout d'une nouvelle personne
-   @RequestMapping("/persons/create")
+   //@RequestMapping("/persons/create")
+   @GetMapping("/create")
   public String getCreatePersonForm(Model model){
-    
+    model.addAttribute("personForm",new PersonForm());
     return "add-person";
   }
-
-   // @RequestMapping(path="/persons/create", method=RequestMethod.POST)
-
+//Ajouter une nouvelle personne à la liste persons
+ //@RequestMapping(path="/persons/create", method=RequestMethod.POST)
+ @PostMapping("/create")
+ public String addPerson(@ModelAttribute @Valid PersonForm personForm, 
+                          BindingResult bindingResult,
+                          Model model ){
+    if(bindingResult.hasErrors()){
+        model.addAttribute("error", "Error field");
+        return "add-person";
+    }
+    this.persons.add(new Person(++idCount, personForm.getName(), personForm.getAge(),null));
+   
+    return "redirect:/persons";
+ }
 
 
 }
