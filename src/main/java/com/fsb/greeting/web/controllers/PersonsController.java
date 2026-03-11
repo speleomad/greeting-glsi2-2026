@@ -8,6 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -72,6 +73,50 @@ public class PersonsController {
    
     return "redirect:/persons";
  }
-
-
+//Update - Get   /persons/{id}/edit : Récupérer le formulaire de modificatin d'une personne
+   @GetMapping("/{id}/edit")
+  public String getEditPersonForm(@PathVariable Long id,Model model){
+    for(Person person: persons){
+        if(person.getId()==id){
+           model.addAttribute("personForm",new PersonForm(person.getName(),person.getAge(),person.getPhoto()));
+           model.addAttribute("id",person.getId());
+            return "update-person";  
+        }
+    }
+   
+        return "redirect:/persons";
+  }
+  //Update - Post  /persons/{id}/edit : Mettre à jour une  personne de la liste persons
+ @PostMapping("/{id}/edit")
+ public String editPerson(@PathVariable Long id,
+                          @ModelAttribute @Valid PersonForm personForm, 
+                          BindingResult bindingResult,
+                          Model model ){
+    if(bindingResult.hasErrors()){
+        model.addAttribute("error", "Error field");
+        return "update-person";
+    }
+     for(Person person: persons){
+        if(person.getId()==id){
+            person.setName(personForm.getName());
+            person.setAge(personForm.getAge());
+            person.setPhoto(personForm.getPhoto());
+            break;
+        }
+    }
+   
+    return "redirect:/persons";
+ }
+ 
+  //Delete - Post /persons/{id}/delete : Supprimer une personne de la liste persons par son id
+ @PostMapping("/{id}/delete")
+  public String deletePerson(@PathVariable Long id){
+    for(Person person: persons){
+        if(person.getId()==id){
+            this.persons.remove(person);
+            break;
+        }
+    }
+    return "redirect:/persons";
+  }
 }
