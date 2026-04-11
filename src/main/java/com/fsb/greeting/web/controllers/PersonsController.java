@@ -1,5 +1,9 @@
 package com.fsb.greeting.web.controllers;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,6 +16,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 
 import com.fsb.greeting.web.models.Person;
 import com.fsb.greeting.web.models.requests.PersonForm;
@@ -44,6 +50,8 @@ public class PersonsController {
         persons.add(new Person(++idCount, "demo3", (short) 40, null));
         persons.add(new Person(++idCount, "demo4", (short) 50, "men.png"));
     }
+
+       public static String uploadDirectory = System.getProperty("user.dir") + "/src/main/resources/static/images";
     
     //Read Get  /persons : Récuperer une liste de personne
    // @RequestMapping("/persons")
@@ -62,17 +70,42 @@ public class PersonsController {
 //Ajouter une nouvelle personne à la liste persons
  //@RequestMapping(path="/persons/create", method=RequestMethod.POST)
  @PostMapping("/create")
- public String addPerson(@ModelAttribute @Valid PersonForm personForm, 
-                          BindingResult bindingResult,
-                          Model model ){
-    if(bindingResult.hasErrors()){
-        model.addAttribute("error", "Error field");
-        return "add-person";
+public String addPerson(@Valid @ModelAttribute PersonForm personForm,
+            BindingResult bindingResult,
+            Model model,
+            @RequestParam MultipartFile file) {
+        if (bindingResult.hasErrors()) {
+            model.addAttribute("error", "Invalid input");
+            return "add-person";
+        }
+        if (!file.isEmpty()) {
+            // Création d'un objet StringBuilder pour stocker le nom du fichier
+            StringBuilder fileName = new StringBuilder();
+            // Ajout du nom de fichier original à l'objet StringBuilder
+            fileName.append(file.getOriginalFilename());
+            // Construction du chemin complet du fichier en combinant le répertoire de
+            // destination et le nom du fichier
+            Path newFilePath = Paths.get(uploadDirectory, fileName.toString());
+
+            try {
+                // Écriture du contenu du fichier dans le chemin spécifié
+                Files.write(newFilePath, file.getBytes());
+            } catch (IOException e) {
+                // Capture et affichage des erreurs éventuelles lors de l'écriture du fichier
+                e.printStackTrace();
+            }
+            // Ajouter la nouvelle personne à la liste persons
+            persons.add(new Person(idCount++, personForm.getName(), personForm.getAge(), fileName.toString()));
+
+        } else {
+            // Ajouter une nouvelle personne sans image à la liste persons
+            persons.add(new Person(idCount++, personForm.getName(), personForm.getAge(), null));
+
+        }
+        // persons.add(new Person(++idCount, personForm.getName(), personForm.getAge(),
+        // null));
+        return "redirect:/persons";
     }
-    this.persons.add(new Person(++idCount, personForm.getName(), personForm.getAge(),null));
-   
-    return "redirect:/persons";
- }
 //Update - Get   /persons/{id}/edit : Récupérer le formulaire de modificatin d'une personne
    @GetMapping("/{id}/edit")
   public String getEditPersonForm(@PathVariable Long id,Model model){
