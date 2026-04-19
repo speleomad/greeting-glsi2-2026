@@ -19,7 +19,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.fsb.greeting.web.models.Person;
+import com.fsb.greeting.business.services.PersonService;
+import com.fsb.greeting.dao.entities.Person;
 import com.fsb.greeting.web.models.requests.PersonForm;
 
 import jakarta.validation.Valid;
@@ -41,6 +42,14 @@ import lombok.Locked.Read;
 @RequestMapping("/persons")
 public class PersonsController {
 
+
+     //injection par constructeur
+    private final PersonService personService;
+    public PersonsController(PersonService personService) {
+        this.personService=personService;
+    }
+
+
     private static List<Person> persons = new ArrayList<Person>();
     private static Long idCount = 0L;
 
@@ -48,7 +57,7 @@ public class PersonsController {
         persons.add(new Person(++idCount, "demo1", (short) 20, "men.png"));
         persons.add(new Person(++idCount, "demo2", (short) 30, "women.png"));
         persons.add(new Person(++idCount, "demo3", (short) 40, null));
-        persons.add(new Person(++idCount, "demo4", (short) 50, "men.png"));
+        persons.add(new Person(++idCount, "demo4", (short) 50, "avatar1.png"));
     }
 
        public static String uploadDirectory = System.getProperty("user.dir") + "/src/main/resources/static/images";
@@ -57,7 +66,7 @@ public class PersonsController {
    // @RequestMapping("/persons")
     @GetMapping()
     public String getAllPerson(Model model){
-        model.addAttribute("persons", this.persons);
+        model.addAttribute("persons", this.personService.getAllPerson());
         return "person-list";
     } 
    //Create - Get   /persons/create : Récupérer le formulaire d'ajout d'une nouvelle personne
@@ -121,35 +130,69 @@ public String addPerson(@Valid @ModelAttribute PersonForm personForm,
   }
   //Update - Post  /persons/{id}/edit : Mettre à jour une  personne de la liste persons
  @PostMapping("/{id}/edit")
- public String editPerson(@PathVariable Long id,
-                          @ModelAttribute @Valid PersonForm personForm, 
-                          BindingResult bindingResult,
-                          Model model ){
-    if(bindingResult.hasErrors()){
-        model.addAttribute("error", "Error field");
-        return "update-person";
-    }
-     for(Person person: persons){
-        if(person.getId()==id){
-            person.setName(personForm.getName());
-            person.setAge(personForm.getAge());
-            person.setPhoto(personForm.getPhoto());
-            break;
+ public String updatePerson(@Valid @ModelAttribute PersonForm personForm,
+            BindingResult bindingResult,
+            @PathVariable Long id,
+            Model model,
+            @RequestParam MultipartFile file) {
+        if (bindingResult.hasErrors()) {
+            model.addAttribute("error", "Invalid input");
+            return "update-person";
         }
+
+        for (Person person : persons) {
+            if (person.getId() == id) {
+                person.setName(personForm.getName());
+                person.setAge(personForm.getAge());
+                if (!file.isEmpty()) {
+                    StringBuilder fileName = new StringBuilder();
+                    Path newFilePath = Paths.get(uploadDirectory, file.getOriginalFilename());
+                    fileName.append(file.getOriginalFilename());
+                    try {
+                        Files.write(newFilePath, file.getBytes());
+                        // Supprimer le fichier de photo si existe
+                        if (person.getPhoto() != null) {
+                            Path filePath = Paths.get(uploadDirectory, person.getPhoto());
+                            try {
+                                Files.deleteIfExists(filePath);
+                            } catch (Exception e) {
+                                e.printStackTrace();
+                            }
+                        }
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                    person.setPhoto(fileName.toString());
+                }
+                break;
+            }
+        }
+
+        return "redirect:/persons";
     }
-   
-    return "redirect:/persons";
- }
  
   //Delete - Post /persons/{id}/delete : Supprimer une personne de la liste persons par son id
  @PostMapping("/{id}/delete")
-  public String deletePerson(@PathVariable Long id){
-    for(Person person: persons){
-        if(person.getId()==id){
-            this.persons.remove(person);
-            break;
+   public String deletePersonById(@PathVariable Long id) {
+
+        for (Person person : persons) {
+            if (person.getId() == id) {
+                // Supprimer le fichier de photo si existe
+                if (person.getPhoto() != null) {
+                    Path filePath = Paths.get(uploadDirectory, person.getPhoto());
+                    try {
+                        Files.deleteIfExists(filePath);
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+                // Supprimer la personne de la liste
+                persons.remove(person);
+
+                break;
+            }
         }
+        return "redirect:/persons";
+
     }
-    return "redirect:/persons";
-  }
 }
