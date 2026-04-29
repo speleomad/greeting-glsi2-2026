@@ -3,22 +3,23 @@ package com.fsb.greeting.business.servicesImpl;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.domain.Sort.Direction;
 import org.springframework.stereotype.Service;
 
 import com.fsb.greeting.business.services.PersonService;
 import com.fsb.greeting.dao.entities.Person;
 import com.fsb.greeting.dao.repositories.PersonRespository;
-@Service
-public class PersonServiceImpl implements PersonService {
+//@Service
+public class PersonServiceImplV2 implements PersonService {
     //@Autowired
-    // private  PersonRespository personRepository;
     private final PersonRespository personRepository;
-    public  PersonServiceImpl(PersonRespository personRepository){
+    public  PersonServiceImplV2(PersonRespository personRepository){
         this.personRepository=personRepository;
     }
      @Override
     public List<Person> getAllPerson() {
-      return  this.personRepository.findAll();
+      return  this.personRepository.findAll(Sort.by(Direction.DESC,"age"));
     }
 
     @Override

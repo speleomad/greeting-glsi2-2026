@@ -42,13 +42,12 @@ import lombok.Locked.Read;
 @RequestMapping("/persons")
 public class PersonsController {
 
-
-     //injection par constructeur
+    // injection par constructeur
     private final PersonService personService;
-    public PersonsController(PersonService personService) {
-        this.personService=personService;
-    }
 
+    public PersonsController(PersonService personService) {
+        this.personService = personService;
+    }
 
     private static List<Person> persons = new ArrayList<Person>();
     private static Long idCount = 0L;
@@ -60,26 +59,29 @@ public class PersonsController {
         persons.add(new Person(++idCount, "demo4", (short) 50, "avatar1.png"));
     }
 
-       public static String uploadDirectory = System.getProperty("user.dir") + "/src/main/resources/static/images";
-    
-    //Read Get  /persons : Récuperer une liste de personne
-   // @RequestMapping("/persons")
+    public static String uploadDirectory = System.getProperty("user.dir") + "/src/main/resources/static/images";
+
+    // Read Get /persons : Récuperer une liste de personne
+    // @RequestMapping("/persons")
     @GetMapping()
-    public String getAllPerson(Model model){
+    public String getAllPerson(Model model) {
         model.addAttribute("persons", this.personService.getAllPerson());
         return "person-list";
-    } 
-   //Create - Get   /persons/create : Récupérer le formulaire d'ajout d'une nouvelle personne
-   //@RequestMapping("/persons/create")
-   @GetMapping("/create")
-  public String getCreatePersonForm(Model model){
-    model.addAttribute("personForm",new PersonForm());
-    return "add-person";
-  }
-//Ajouter une nouvelle personne à la liste persons
- //@RequestMapping(path="/persons/create", method=RequestMethod.POST)
- @PostMapping("/create")
-public String addPerson(@Valid @ModelAttribute PersonForm personForm,
+    }
+
+    // Create - Get /persons/create : Récupérer le formulaire d'ajout d'une nouvelle
+    // personne
+    // @RequestMapping("/persons/create")
+    @GetMapping("/create")
+    public String getCreatePersonForm(Model model) {
+        model.addAttribute("personForm", new PersonForm());
+        return "add-person";
+    }
+
+    // Ajouter une nouvelle personne à la liste persons
+    // @RequestMapping(path="/persons/create", method=RequestMethod.POST)
+    @PostMapping("/create")
+    public String addPerson(@Valid @ModelAttribute PersonForm personForm,
             BindingResult bindingResult,
             Model model,
             @RequestParam MultipartFile file) {
@@ -104,33 +106,51 @@ public String addPerson(@Valid @ModelAttribute PersonForm personForm,
                 e.printStackTrace();
             }
             // Ajouter la nouvelle personne à la liste persons
-            persons.add(new Person(idCount++, personForm.getName(), personForm.getAge(), fileName.toString()));
+            // persons.add(new Person(idCount++, personForm.getName(), personForm.getAge(),
+            // fileName.toString()));
+            this.personService
+                    .addPerson(new Person(null, personForm.getName(), personForm.getAge(), fileName.toString()));
 
         } else {
             // Ajouter une nouvelle personne sans image à la liste persons
-            persons.add(new Person(idCount++, personForm.getName(), personForm.getAge(), null));
+            // persons.add(new Person(idCount++, personForm.getName(), personForm.getAge(),
+            // null));
+            this.personService.addPerson(new Person(null, personForm.getName(), personForm.getAge(), null));
 
         }
         // persons.add(new Person(++idCount, personForm.getName(), personForm.getAge(),
         // null));
         return "redirect:/persons";
     }
-//Update - Get   /persons/{id}/edit : Récupérer le formulaire de modificatin d'une personne
-   @GetMapping("/{id}/edit")
-  public String getEditPersonForm(@PathVariable Long id,Model model){
-    for(Person person: persons){
-        if(person.getId()==id){
-           model.addAttribute("personForm",new PersonForm(person.getName(),person.getAge(),person.getPhoto()));
-           model.addAttribute("id",person.getId());
-            return "update-person";  
+
+    // Update - Get /persons/{id}/edit : Récupérer le formulaire de modificatin
+    // d'une personne
+    @GetMapping("/{id}/edit")
+    public String getEditPersonForm(@PathVariable Long id, Model model) {
+        /*
+         * for(Person person: persons){
+         * if(person.getId()==id){
+         * model.addAttribute("personForm",new
+         * PersonForm(person.getName(),person.getAge(),person.getPhoto()));
+         * model.addAttribute("id",person.getId());
+         * return "update-person";
+         * }
+         * }
+         */
+        Person person = this.personService.getPersonById(id);
+        if (person == null) {
+            return "redirect:/persons";
         }
+        model.addAttribute("personForm", new PersonForm(person.getName(), person.getAge(), person.getPhoto()));
+        model.addAttribute("id", person.getId());
+        return "update-person";
+
     }
-   
-        return "redirect:/persons";
-  }
-  //Update - Post  /persons/{id}/edit : Mettre à jour une  personne de la liste persons
- @PostMapping("/{id}/edit")
- public String updatePerson(@Valid @ModelAttribute PersonForm personForm,
+
+    // Update - Post /persons/{id}/edit : Mettre à jour une personne de la liste
+    // persons
+    @PostMapping("/{id}/edit")
+    public String updatePerson(@Valid @ModelAttribute PersonForm personForm,
             BindingResult bindingResult,
             @PathVariable Long id,
             Model model,
@@ -139,43 +159,76 @@ public String addPerson(@Valid @ModelAttribute PersonForm personForm,
             model.addAttribute("error", "Invalid input");
             return "update-person";
         }
+        /*
+         * for (Person person : persons) {
+         * if (person.getId() == id) {
+         * person.setName(personForm.getName());
+         * person.setAge(personForm.getAge());
+         * if (!file.isEmpty()) {
+         * StringBuilder fileName = new StringBuilder();
+         * Path newFilePath = Paths.get(uploadDirectory, file.getOriginalFilename());
+         * fileName.append(file.getOriginalFilename());
+         * try {
+         * Files.write(newFilePath, file.getBytes());
+         * // Supprimer le fichier de photo si existe
+         * if (person.getPhoto() != null) {
+         * Path filePath = Paths.get(uploadDirectory, person.getPhoto());
+         * try {
+         * Files.deleteIfExists(filePath);
+         * } catch (Exception e) {
+         * e.printStackTrace();
+         * }
+         * }
+         * } catch (Exception e) {
+         * e.printStackTrace();
+         * }
+         * person.setPhoto(fileName.toString());
+         * }
+         * break;
+         * }
+         * }
+         */
+        Person person = this.personService.getPersonById(id);
+        if (person == null) {
+            return "redirect:/persons";
+        }
 
-        for (Person person : persons) {
-            if (person.getId() == id) {
-                person.setName(personForm.getName());
-                person.setAge(personForm.getAge());
-                if (!file.isEmpty()) {
-                    StringBuilder fileName = new StringBuilder();
-                    Path newFilePath = Paths.get(uploadDirectory, file.getOriginalFilename());
-                    fileName.append(file.getOriginalFilename());
+        person.setName(personForm.getName());
+        person.setAge(personForm.getAge());
+        if (!file.isEmpty()) {
+            StringBuilder fileName = new StringBuilder();
+            Path newFilePath = Paths.get(uploadDirectory, file.getOriginalFilename());
+            fileName.append(file.getOriginalFilename());
+            try {
+                Files.write(newFilePath, file.getBytes());
+                // Supprimer le fichier de photo si existe
+                if (person.getPhoto() != null) {
+                    Path filePath = Paths.get(uploadDirectory, person.getPhoto());
                     try {
-                        Files.write(newFilePath, file.getBytes());
-                        // Supprimer le fichier de photo si existe
-                        if (person.getPhoto() != null) {
-                            Path filePath = Paths.get(uploadDirectory, person.getPhoto());
-                            try {
-                                Files.deleteIfExists(filePath);
-                            } catch (Exception e) {
-                                e.printStackTrace();
-                            }
-                        }
+                        Files.deleteIfExists(filePath);
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
-                    person.setPhoto(fileName.toString());
                 }
-                break;
+            } catch (Exception e) {
+                e.printStackTrace();
             }
+            person.setPhoto(fileName.toString());
+            this.personService.updatePerson(id, person);
+            return "redirect:/persons";
         }
+
+        this.personService.updatePerson(id, person);
 
         return "redirect:/persons";
     }
- 
-  //Delete - Post /persons/{id}/delete : Supprimer une personne de la liste persons par son id
- @PostMapping("/{id}/delete")
-   public String deletePersonById(@PathVariable Long id) {
 
-        for (Person person : persons) {
+    // Delete - Post /persons/{id}/delete : Supprimer une personne de la liste
+    // persons par son id
+    @PostMapping("/{id}/delete")
+    public String deletePersonById(@PathVariable Long id) {
+
+        /* for (Person person : persons) {
             if (person.getId() == id) {
                 // Supprimer le fichier de photo si existe
                 if (person.getPhoto() != null) {
@@ -191,7 +244,22 @@ public String addPerson(@Valid @ModelAttribute PersonForm personForm,
 
                 break;
             }
+        } */
+       Person person = this.personService.getPersonById(id);
+        if (person == null) {
+            return "redirect:/persons";
         }
+          // Supprimer le fichier de photo si existe
+                if (person.getPhoto() != null) {
+                    Path filePath = Paths.get(uploadDirectory, person.getPhoto());
+                    try {
+                        Files.deleteIfExists(filePath);
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+          this.personService.deletePersonById(id);      
+
         return "redirect:/persons";
 
     }

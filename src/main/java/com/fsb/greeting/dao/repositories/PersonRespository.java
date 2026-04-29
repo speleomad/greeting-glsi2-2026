@@ -1,5 +1,6 @@
 package com.fsb.greeting.dao.repositories;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -10,4 +11,6 @@ import com.fsb.greeting.dao.entities.Person;
 @Repository
 public interface PersonRespository extends JpaRepository<Person, Long> {
     Optional<Person> findPersonByName(String name); 
+     List<Person> findPersonByAge(int age); 
+
 }
